@@ -11331,7 +11331,7 @@
 											"top": 563,
 											"width": 71,
 											"height": 12,
-											"text": "Entity"
+											"text": "Persistence"
 										},
 										{
 											"_type": "LabelView",
@@ -17574,7 +17574,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGAGJJdHbNlWtQ="
 					},
-					"name": "Entity",
+					"name": "Persistence",
 					"ownedElements": [
 						{
 							"_type": "UMLExtension",

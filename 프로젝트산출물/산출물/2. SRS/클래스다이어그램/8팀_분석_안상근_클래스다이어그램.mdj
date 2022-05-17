@@ -4059,7 +4059,7 @@
 											"top": 525,
 											"width": 127.4736328125,
 											"height": 13,
-											"text": "«Control»"
+											"text": "«Service»"
 										},
 										{
 											"_type": "LabelView",
@@ -5438,7 +5438,7 @@
 											"top": 69,
 											"width": 97.86181640625,
 											"height": 13,
-											"text": "«Control»"
+											"text": "«Service»"
 										},
 										{
 											"_type": "LabelView",
@@ -5903,7 +5903,7 @@
 											"top": 309,
 											"width": 127.4736328125,
 											"height": 13,
-											"text": "«Control»"
+											"text": "«Service»"
 										},
 										{
 											"_type": "LabelView",
@@ -7034,7 +7034,7 @@
 							}
 						}
 					],
-					"stereotype": "Control",
+					"stereotype": "Service",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -7131,7 +7131,7 @@
 							}
 						}
 					],
-					"stereotype": "Control",
+					"stereotype": "Service",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -7190,7 +7190,7 @@
 							}
 						}
 					],
-					"stereotype": "Control",
+					"stereotype": "Service",
 					"operations": [
 						{
 							"_type": "UMLOperation",
