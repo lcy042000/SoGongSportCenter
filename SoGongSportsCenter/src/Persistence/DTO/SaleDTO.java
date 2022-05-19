@@ -2,7 +2,7 @@ package Persistence.DTO;
 
 import java.util.Date;
 
-public class Announcement {
+public class SalesDTO {
     public int announcementId;
     public String announcementTitle;
     public String announcementContent;
@@ -12,7 +12,7 @@ public class Announcement {
     public int isAttachedFile;
     public Date writeDate;
 
-    public Announcement(String announcementTitle, String announcementContent, int announcementWriterId, String announcementWriterName, int hits, int isAttachedFile, Date writeDate) {
+    public SalesDTO(String announcementTitle, String announcementContent, int announcementWriterId, String announcementWriterName, int hits, int isAttachedFile, Date writeDate) {
         this.announcementTitle = announcementTitle;
         this.announcementContent = announcementContent;
         this.announcementWriterId = announcementWriterId;

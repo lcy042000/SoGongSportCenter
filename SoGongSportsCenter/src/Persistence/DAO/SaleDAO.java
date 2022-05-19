@@ -1,14 +1,14 @@
 package Persistence.DAO;
 
-import Persistence.DTO.Announcement;
+import Persistence.DTO.SalesDTO;
 
 import java.sql.*;
 
-public class AnnouncementController {
+public class SalesDAO {
 
     private Connection conn;
 
-    public AnnouncementController(){
+    public SalesDAO(){
         try{
             String dbURL = "jdbc:mysql://localhost:3306/OOSE";
             String dbId = "root";
@@ -20,7 +20,7 @@ public class AnnouncementController {
         }
     }
 
-    public void createAnnouncement(Announcement announcement){
+    public void createAnnouncement(SalesDTO announcement){
 
         PreparedStatement pstmt;;
 
