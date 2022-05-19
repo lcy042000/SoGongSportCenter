@@ -1,57 +1,78 @@
 package Persistence.DAO;
 
-import Persistence.DTO.SalesDTO;
+import Persistence.DTO.SaleDTO;
+import rsc.*;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class SalesDAO {
+public class SaleDAO {
 
     private Connection conn;
-
-    public SalesDAO(){
+    private Info info;
+    public SaleDAO(){
         try{
-            String dbURL = "jdbc:mysql://localhost:3306/OOSE";
-            String dbId = "root";
-            String dbPassword = "db042000@";
+            String dbURL = Info.dbURL;
+            String dbId = Info.dbId;
+            String dbPassword = Info.dbPassword;
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(dbURL, dbId, dbPassword);
         }catch (Exception e){
             e.printStackTrace();
         }
     }
 
-    public void createAnnouncement(SalesDTO announcement){
+    public List<SaleDTO> selectSalesByPeriod(Date start, Date end) {
+        String SQL = "Select * from sales where time > ?  AND time < ?";
 
-        PreparedStatement pstmt;;
+        List<SaleDTO> saleDTOList = new ArrayList<>();
 
-        String SQL = "INSERT INTO announcement " +
-                "Announcement_Title," +
-                "Announcement_Content," +
-                "Announcement_Writer_ID," +
-                "Announcement_Writer_Name," +
-                "Write_Date," +
-                "IsAttachedFile," +
-                "Hits)" +
-                "VALUES (?, ?, ?, ?, ?, ?, ?);";
 
-        try{
-            pstmt = conn.prepareStatement(SQL);
-            pstmt.setString(1, announcement.getAnnouncementTitle());
-            pstmt.setString(2, announcement.getAnnouncementContent());
-            pstmt.setInt(3, announcement.getAnnouncementWriterId());
-            pstmt.setString(4, announcement.getAnnouncementWriterName());
-            pstmt.setDate(5, (Date) announcement.getWriteDate());
-            pstmt.setInt(6, announcement.getIsAttachedFile());
-            pstmt.setInt(7, 0);
+        try (Connection conn = DriverManager.getConnection(Info.dbURL, Info.dbId, Info.dbPassword);
+             PreparedStatement psmt = conn.prepareStatement(SQL)) {
+             psmt.setDate(1, start);
+             psmt.setDate(2, end);
 
-            int result = pstmt.executeUpdate();
-
-            if(result != 1){
-                System.out.println("생성에 실패하였습니다.");
+            try (ResultSet rs = psmt.executeQuery()) {
+                while (rs.next()) {
+                    SaleDTO saleDTO = new SaleDTO();
+                    saleDTO.setCenterName(rs.getString("centerName"));
+                    saleDTO.setLessonName(rs.getString("lessonName"));
+                    saleDTO.setTime(rs.getDate("time"));
+                    saleDTO.setSales(rs.getInt("sales"));
+                    saleDTOList.add(saleDTO);
+                }
             }
-        }catch (SQLException e){
+        }catch (Exception e){
             e.printStackTrace();
         }
+        return saleDTOList;
+    }
+
+    public List<SaleDTO> selectSalesByLesson(String lesson) {
+        String SQL = "Select * from sales where lessonName = ?";
+
+        List<SaleDTO> saleDTOList = new ArrayList<>();
+
+
+        try (Connection conn = DriverManager.getConnection(Info.dbURL, Info.dbId, Info.dbPassword);
+             PreparedStatement psmt = conn.prepareStatement(SQL)) {
+            psmt.setString(1, lesson);
+
+            try (ResultSet rs = psmt.executeQuery()) {
+                while (rs.next()) {
+                    SaleDTO saleDTO = new SaleDTO();
+                    saleDTO.setCenterName(rs.getString("centerName"));
+                    saleDTO.setLessonName(rs.getString("lessonName"));
+                    saleDTO.setTime(rs.getDate("time"));
+                    saleDTO.setSales(rs.getInt("sales"));
+                    saleDTOList.add(saleDTO);
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return saleDTOList;
     }
 
 //    public void updateAnnouncement(int announcementId, Announcement announcement){

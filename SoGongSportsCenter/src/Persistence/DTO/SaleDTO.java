@@ -2,87 +2,41 @@ package Persistence.DTO;
 
 import java.util.Date;
 
-public class SalesDTO {
-    public int announcementId;
-    public String announcementTitle;
-    public String announcementContent;
-    public int announcementWriterId;
-    public String announcementWriterName;
-    public int hits;
-    public int isAttachedFile;
-    public Date writeDate;
+public class SaleDTO {
+   private int index;
+    private String centerName;
+    private String lessonName;
+    private Date time;
+    private int sales;
 
-    public SalesDTO(String announcementTitle, String announcementContent, int announcementWriterId, String announcementWriterName, int hits, int isAttachedFile, Date writeDate) {
-        this.announcementTitle = announcementTitle;
-        this.announcementContent = announcementContent;
-        this.announcementWriterId = announcementWriterId;
-        this.announcementWriterName = announcementWriterName;
-        this.hits = hits;
-        this.isAttachedFile = isAttachedFile;
-        this.writeDate = writeDate;
+    public SaleDTO() { }
+
+    public SaleDTO(String centerName, String lessonName, Date time, int sales) {
+        this.centerName = centerName;
+        this.lessonName = lessonName;
+        this.time = time;
+        this.sales = sales;
     }
 
-    public int getAnnouncementId() {
-        return announcementId;
+    public String getCenterName() { return centerName; }
+    public String getLessonName() { return lessonName; }
+    public Date getTime() { return time; }
+    public int getSales() { return sales; }
+
+    public void setCenterName(String centerName) {
+        this.centerName = centerName;
+    }
+    public void  setLessonName(String lessonName) {
+        this.lessonName = lessonName;
+    }
+    public void setTime(Date time) {
+        this.time = time;
+    }
+    public void setSales(int sales) {
+        this.sales = sales;
     }
 
-    public void setAnnouncementId(int announcementId) {
-        this.announcementId = announcementId;
-    }
-
-    public String getAnnouncementTitle() {
-        return announcementTitle;
-    }
-
-    public void setAnnouncementTitle(String announcementTitle) {
-        this.announcementTitle = announcementTitle;
-    }
-
-    public String getAnnouncementContent() {
-        return announcementContent;
-    }
-
-    public void setAnnouncementContent(String announcementContent) {
-        this.announcementContent = announcementContent;
-    }
-
-    public int getAnnouncementWriterId() {
-        return announcementWriterId;
-    }
-
-    public void setAnnouncementWriterId(int announcementWriterId) {
-        this.announcementWriterId = announcementWriterId;
-    }
-
-    public String getAnnouncementWriterName() {
-        return announcementWriterName;
-    }
-
-    public void setAnnouncementWriterName(String announcementWriterName) {
-        this.announcementWriterName = announcementWriterName;
-    }
-
-    public int getHits() {
-        return hits;
-    }
-
-    public void setHits(int hits) {
-        this.hits = hits;
-    }
-
-    public int getIsAttachedFile() {
-        return isAttachedFile;
-    }
-
-    public void setIsAttachedFile(int isAttachedFile) {
-        this.isAttachedFile = isAttachedFile;
-    }
-
-    public Date getWriteDate() {
-        return writeDate;
-    }
-
-    public void setWriteDate(Date writeDate) {
-        this.writeDate = writeDate;
+    public void printSales() {
+        System.out.println("|" + centerName + "|" + lessonName + "|" + "|" + time + "|" + sales);
     }
 }
