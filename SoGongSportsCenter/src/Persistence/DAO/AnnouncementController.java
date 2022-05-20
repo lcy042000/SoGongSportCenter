@@ -20,9 +20,9 @@ public class AnnouncementController {
         }
     }
 
-    public void createAnnouncement(Announcement announcement){
+    public void createAnnouncement(Announcement announcement) {
 
-        PreparedStatement pstmt;;
+        PreparedStatement pstmt = null;
 
         String SQL = "INSERT INTO announcement " +
                 "Announcement_Title," +
@@ -51,6 +51,13 @@ public class AnnouncementController {
             }
         }catch (SQLException e){
             e.printStackTrace();
+        }finally {
+            try{
+                if(pstmt != null) {pstmt.close();}
+            }catch (SQLException e){
+                e.printStackTrace();
+            }
+
         }
     }
 
@@ -58,10 +65,44 @@ public class AnnouncementController {
 //
 //    }
 //
-//    public Announcement readAnnouncement(int announcementId){
-//
-//    }
-//
+    public Announcement readAnnouncement(int announcementId){
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        Announcement announcement = null;
+
+        String SQL = "SELECT * FROM announcement WHERE announcementId=?";
+
+        try{
+            pstmt = conn.prepareStatement(SQL);
+            rs = pstmt.executeQuery();
+
+            while(rs.next()){
+                int announcementIdResult = rs.getInt("announcementId");
+                String announcementTitle = rs.getString("announcementTitle");
+                String announcementContent = rs.getString("announcementContent");
+                int announcementWriterId = rs.getInt("announcementWriterId");
+                String announcementWriterName = rs.getString("announcementWriterName");
+                int hits = rs.getInt("hits");
+                int isAttachedFile = rs.getInt("isAttachedFile");
+                Date writeDate = rs.getDate("writeDate");
+
+                return new Announcement(announcementTitle, announcementContent, announcementWriterId, announcementWriterName, hits, isAttachedFile, writeDate)
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            try{
+                if(pstmt != null) {pstmt.close();}
+                if(rs != null) {rs.close();}
+            }catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+
+        return announcement;
+    }
+
 //    public void deleteAnnouncement(int announcementId){
 //
 //    }
@@ -70,15 +111,4 @@ public class AnnouncementController {
 //
 //    }
 //
-//    public void createAttachedFile(AttachedFile attachedFile, int announcementId){
-//
-//    }
-//
-//    public AttachedFile readAttachedFile(int announcementId){
-//
-//    }
-//
-//    public void deleteAttachedFile(int announcementId){
-//
-//    }
 }

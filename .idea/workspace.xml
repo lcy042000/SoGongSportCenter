@@ -6,8 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="init">
+    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Dummy">
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AttachedFileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/바탕 화면/Kumoh/2022학년도 1학기/객체지향소프트웨어공학/2021_프로젝트_산출물/프로젝트산출물(버전관리)/4. SRC/OOSE/OOSE/WebContent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="모듈" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -181,7 +183,9 @@
       <workItem from="1652674438358" duration="162000" />
       <workItem from="1652714651462" duration="3975000" />
       <workItem from="1652755138182" duration="1025000" />
-      <workItem from="1652767454541" duration="4633000" />
+      <workItem from="1652767454541" duration="4940000" />
+      <workItem from="1652787299303" duration="1243000" />
+      <workItem from="1653007672198" duration="1798000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>
@@ -204,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652772961040</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Dummy">
+      <created>1652774001127</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652774001127</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +226,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -223,6 +246,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="Dummy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dummy" />
   </component>
 </project>
