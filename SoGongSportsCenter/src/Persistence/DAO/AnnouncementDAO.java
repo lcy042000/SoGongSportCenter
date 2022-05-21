@@ -1,14 +1,14 @@
 package Persistence.DAO;
 
-import Persistence.DTO.Announcement;
+import Persistence.DTO.AnnouncementDTO;
 
 import java.sql.*;
 
-public class AnnouncementController {
+public class AnnouncementDAO {
 
     private Connection conn;
 
-    public AnnouncementController(){
+    public AnnouncementDAO(){
         try{
             String dbURL = "jdbc:mysql://localhost:3306/OOSE";
             String dbId = "root";
@@ -20,7 +20,7 @@ public class AnnouncementController {
         }
     }
 
-    public void createAnnouncement(Announcement announcement) {
+    public void createAnnouncement(AnnouncementDTO announcement) {
 
         PreparedStatement pstmt = null;
 
@@ -38,7 +38,7 @@ public class AnnouncementController {
             pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1, announcement.getAnnouncementTitle());
             pstmt.setString(2, announcement.getAnnouncementContent());
-            pstmt.setInt(3, announcement.getAnnouncementWriterId());
+            //pstmt.setInt(3, announcement.getAnnouncementWriterId());
             pstmt.setString(4, announcement.getAnnouncementWriterName());
             pstmt.setDate(5, (Date) announcement.getWriteDate());
             pstmt.setInt(6, announcement.getIsAttachedFile());
@@ -65,11 +65,11 @@ public class AnnouncementController {
 //
 //    }
 //
-    public Announcement readAnnouncement(int announcementId){
+    public AnnouncementDTO readAnnouncement(int announcementId){
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
-        Announcement announcement = null;
+        AnnouncementDTO announcement = null;
 
         String SQL = "SELECT * FROM announcement WHERE announcementId=?";
 
@@ -87,7 +87,7 @@ public class AnnouncementController {
                 int isAttachedFile = rs.getInt("isAttachedFile");
                 Date writeDate = rs.getDate("writeDate");
 
-                return new Announcement(announcementTitle, announcementContent, announcementWriterId, announcementWriterName, hits, isAttachedFile, writeDate)
+                return new AnnouncementDTO(announcementTitle, announcementContent, announcementWriterName, writeDate, isAttachedFile, hits);
             }
         }catch (SQLException e){
             e.printStackTrace();

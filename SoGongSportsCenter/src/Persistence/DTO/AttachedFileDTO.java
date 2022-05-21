@@ -2,10 +2,16 @@ package Persistence.DTO;
 
 import java.sql.Blob;
 
-public class AttachedFile {
+public class AttachedFileDTO {
     public int attachedFileId;
     public int announcementId;
     public Blob attachedFile;
+
+    public AttachedFileDTO(int attachedFileId, int announcementId, Blob attachedFile) {
+        this.attachedFileId = attachedFileId;
+        this.announcementId = announcementId;
+        this.attachedFile = attachedFile;
+    }
 
     public int getAttachedFileId() {
         return attachedFileId;

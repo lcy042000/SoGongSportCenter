@@ -6,10 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Dummy">
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AttachedFileController.java" afterDir="false" />
+    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Announcement DAO까지 구현">
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AnnouncementDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AttachedFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AttachedFileDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AttachedFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AttachedFileDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +188,8 @@
       <workItem from="1652755138182" duration="1025000" />
       <workItem from="1652767454541" duration="4940000" />
       <workItem from="1652787299303" duration="1243000" />
-      <workItem from="1653007672198" duration="1798000" />
+      <workItem from="1653007672198" duration="1886000" />
+      <workItem from="1653122567766" duration="2434000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>
@@ -215,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652774001127</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Announcement DAO까지 구현">
+      <created>1653016991493</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653016991493</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +258,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="Dummy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dummy" />
+    <MESSAGE value="Announcement DAO까지 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="Announcement DAO까지 구현" />
   </component>
 </project>
