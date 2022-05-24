@@ -3,7 +3,6 @@ package Persistence.DAO;
 import Persistence.DTO.UserDTO;
 
 import java.sql.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +47,45 @@ public class UserDAO {
             }
             catch(SQLException e){
                 System.out.println("SQL USER CLOSE ERROR");
+            }
+        }
+        return userDTOS;
+    }
+
+    public List<UserDTO> selectUserByName(String name){
+        List<UserDTO> userDTOS = new ArrayList<>();
+        String sql = "SELECT * FROM USER WHERE userName = " + name;
+        Statement stmt= null;
+        ResultSet rs = null;
+        try {
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                UserDTO userDTO = new UserDTO();
+                int userId = rs.getInt("userId");
+                String userPassword = rs.getString("userPassword");
+                String userName = rs.getString("userName");
+                String userType = rs.getString("userType");
+
+                userDTO.setUserId(userId);
+                userDTO.setUserPassword(userPassword);
+                userDTO.setUserName(userName);
+                userDTO.setUserType(userType);
+                userDTOS.add(userDTO);
+            }
+        }catch (SQLException e) {
+            System.out.printf("SELECT USER BY NAME ERROR");
+        }finally {
+            try{
+                if(conn != null && !rs.isClosed()){
+                    rs.close();
+                }
+                if(conn != null && !stmt.isClosed()){
+                    rs.close();
+                }
+            }
+            catch(SQLException e){
+                System.out.println("SQL USER BY NAME CLOSE ERROR");
             }
         }
         return userDTOS;

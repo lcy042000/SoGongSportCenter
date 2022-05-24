@@ -117,4 +117,8 @@ public class InstructorDAO extends UserDAO {
             }
         }
     }
+
+    public void updateInstructorId(int userId, int instructorId){
+        // 필요하면 만들예정
+    }
 }
