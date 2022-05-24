@@ -7,11 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Announcement DAO까지 구현">
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/LessonDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/Lesson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/LessonRegistrationInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/LessonManagementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/rsc/rsc/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/rsc/rsc/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/LessonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/LessonDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +181,7 @@
       <workItem from="1653206652438" duration="92000" />
       <workItem from="1653276379474" duration="1245000" />
       <workItem from="1653288254700" duration="411000" />
+      <workItem from="1653319668775" duration="1116000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>
