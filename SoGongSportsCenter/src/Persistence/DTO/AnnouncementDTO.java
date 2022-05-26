@@ -3,14 +3,23 @@ package Persistence.DTO;
 import java.util.Date;
 
 public class AnnouncementDTO {
-    private String announcementId;
+    private int announcementId;
     private String announcementTitle;
     private String announcementContent;
-    //private int announcementWriterId;
     private String announcementWriterName;
     private Date writeDate;
     private int isAttachedFile;
     private int hits;
+
+    public AnnouncementDTO() {
+        announcementId = 0;
+        announcementTitle = null;
+        announcementContent = null;
+        announcementWriterName = null;
+        writeDate = null;
+        isAttachedFile = 0;
+        hits = 0;
+    }
 
     public AnnouncementDTO(String announcementTitle, String announcementContent, String announcementWriterName, Date writeDate, int isAttachedFile, int hits) {
         this.announcementTitle = announcementTitle;
@@ -21,6 +30,13 @@ public class AnnouncementDTO {
         this.hits = hits;
     }
 
+    public int getAnnouncementId() {
+        return announcementId;
+    }
+
+    public void setAnnouncementId(int announcementId) {
+        this.announcementId = announcementId;
+    }
 
     public String getAnnouncementTitle() {
         return announcementTitle;

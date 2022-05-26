@@ -7,6 +7,12 @@ public class AttachedFileDTO {
     public int announcementId;
     public Blob attachedFile;
 
+    public AttachedFileDTO(){
+        attachedFileId = 0;
+        announcementId = 0;
+        attachedFile = null;
+    }
+
     public AttachedFileDTO(int attachedFileId, int announcementId, Blob attachedFile) {
         this.attachedFileId = attachedFileId;
         this.announcementId = announcementId;

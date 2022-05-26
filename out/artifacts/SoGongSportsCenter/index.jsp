@@ -1,16 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 84102
-  Date: 2022-05-14
-  Time: 오후 5:46
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>소공 체육 센터</title>
   </head>
   <body>
-  $END$
+    <script>
+      location.href = 'main.jsp';
+    </script>
   </body>
 </html>
