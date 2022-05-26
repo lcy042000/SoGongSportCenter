@@ -9,6 +9,45 @@
 <html>
 <head>
     <title>SOGONG Sport Center</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        li{
+            display: flex;
+            list-style:none;
+            background-color: gainsboro;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        a:link{
+            color: black;
+            text-decoration: none;
+        }
+        a:visited{
+            color: black;
+            text-decoration: none;
+        }
+        .contents_container{
+            display: flex;
+        }
+        .sidebar{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
 <p><h1><a href="/">소공체육센터관리</a></h1></p>
@@ -29,10 +68,24 @@
         <a href="#">3 관리</a>
     </li>
 </div>
-<div>
-    <li><a href="/userManage/enroll">회원 등록</a></li>
-    <li><a href="/userManage/read">회원 조회</a></li>
+<div class="contents_container">
+    <div class="sidebar">
+        <li><a href="/userManage/enroll">회원 등록</a></li>
+        <li><a href="/userManage/read">회원 조회</a></li>
+    </div>
+    <div class="content">
+        <h2>사용자 조회</h2>
+        <form method="get" action="/userManage/read">
+            <select id="method" name="method">
+                <option value="">조회 방식</option>
+                <option value="all">모두</option>
+                <option value="name">이름</option>
+                <option value="type">타입</option>
+            </select>
+            <input type="text" name="data">
+            <input type="submit" value="submit">
+        </form>
+    </div>
 </div>
-회원조회
 </body>
 </html>

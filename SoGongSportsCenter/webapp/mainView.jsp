@@ -15,10 +15,15 @@
         }
         .container{
             display: flex;
+            justify-content: center;
         }
         li{
+            display: flex;
             list-style:none;
             background-color: gainsboro;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
         }
         a:link{
             color: black;
@@ -31,7 +36,7 @@
     </style>
 </head>
 <body>
-    <p><h1><a href="/">소공체육센터관리</a></h1></p>
+    <p><h1 id="title"><a href="/">소공체육센터관리</a></h1></p>
     <div class="container">
         <li>
             <a href="/userManage">사용자 관리</a>
