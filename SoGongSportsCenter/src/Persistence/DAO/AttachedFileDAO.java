@@ -3,71 +3,88 @@ package Persistence.DAO;
 import Persistence.DTO.AnnouncementDTO;
 import Persistence.DTO.AttachedFileDTO;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.List;
 
 public class AttachedFileDAO {
 
-    private Connection conn;
+    private DataSource ds;
+    private static AttachedFileDAO instance;
 
     public AttachedFileDAO(){
         try{
-            String dbURL = "jdbc:mysql://localhost:3306/OOSE";
-            String dbId = "root";
-            String dbPassword = "db042000@";
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(dbURL, dbId, dbPassword);
+            Context context = new InitialContext();
+            ds = (DataSource) context.lookup("java:comp/env/jdbc/OOSE");
         }catch (Exception e){
             e.printStackTrace();
         }
     }
 
-    public void createAttachedFile(AttachedFileDTO attachedFile, int announcementId){
+    public static AttachedFileDAO getInstance(){
+        if(instance == null){
+            instance = new AttachedFileDAO();
+        }
 
+        return instance;
+    }
+
+    public boolean createAttachedFile(AttachedFileDTO attachedFile, int announcementId){
+        Connection conn = null;
         PreparedStatement pstmt = null;
 
         String SQL = "INSERT INTO attachedFile " +
-                "Announcement_ID," +
+                "(Announcement_ID," +
                 "AttachedFile)" +
                 "VALUES (?, ?);";
 
         try{
+            conn = ds.getConnection();
             pstmt = conn.prepareStatement(SQL);
-            pstmt.setInt(1, attachedFile.getAnnouncementId());
+            pstmt.setInt(1, announcementId);
             pstmt.setBlob(2, attachedFile.getAttachedFile());
 
             int result = pstmt.executeUpdate();
 
             if(result != 1){
                 System.out.println("생성에 실패하였습니다.");
+                return false;
             }
         }catch (SQLException e){
             e.printStackTrace();
         }finally {
             try{
+                if(conn != null) conn.close();
                 if(pstmt != null) {pstmt.close();}
             }catch (SQLException e){
                 e.printStackTrace();
             }
 
         }
+
+        return true;
     }
 
     public List<AttachedFileDTO> readAttachedFile(int announcementId){
+        Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
         List<AttachedFileDTO> attachedFileDTOS = null;
 
-        String SQL = "SELECT * FROM attachedfile WHERE announcementId=?";
+        String SQL = "SELECT * FROM attachedfile WHERE Announcement_ID=?";
 
         try{
+            conn = ds.getConnection();
             pstmt = conn.prepareStatement(SQL);
+            pstmt.setInt(1, announcementId);
             rs = pstmt.executeQuery();
 
             while(rs.next()){
-                int attachedFileId = rs.getInt("attachedFileId");
-                int announcementIdResult = rs.getInt("announcementId");
+                int attachedFileId = rs.getInt("AttachedFile_ID");
+                int announcementIdResult = rs.getInt("Announcement_ID");
                 Blob attachedFile = rs.getBlob("AttachedFile");
 
                 attachedFileDTOS.add(new AttachedFileDTO(attachedFileId, announcementIdResult, attachedFile));
@@ -76,6 +93,7 @@ public class AttachedFileDAO {
             e.printStackTrace();
         }finally {
             try{
+                if(conn != null) conn.close();
                 if(pstmt != null) {pstmt.close();}
                 if(rs != null) {rs.close();}
             }catch (SQLException e){
