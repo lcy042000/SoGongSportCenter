@@ -6,9 +6,31 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Persistence 구현 완료">
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/AnnouncementService.java" afterDir="false" />
+
+    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Announcement DAO까지 구현">
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/AnnouncementView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/MainView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AdminDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/DBConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/InstructorDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/MemberDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AdminDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/Announcement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AttachedFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/InstructorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/MemberDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserEnroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserRead.java" afterDir="false" />
+
       <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreate.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementList.jsp" afterDir="false" />
@@ -21,6 +43,7 @@
       <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/css/main.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/SoGongSportsCenter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/SoGongSportsCenter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AttachedFileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AttachedFileDAO.java" afterDir="false" />
@@ -36,6 +59,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Entity/Announcement.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Entity/AttachedFile.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Main.class" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +103,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -100,9 +125,10 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+      
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat 서버.Tomcat 10.0.20">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoGongSportsCenter" />
@@ -211,11 +237,6 @@
         </option>
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="애플리케이션.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -233,6 +254,7 @@
       <workItem from="1652767454541" duration="4940000" />
       <workItem from="1652787299303" duration="1243000" />
       <workItem from="1653007672198" duration="1886000" />
+
       <workItem from="1653122567766" duration="2484000" />
       <workItem from="1653146090471" duration="600000" />
       <workItem from="1653396888324" duration="6337000" />
@@ -242,6 +264,7 @@
       <workItem from="1653493977131" duration="8071000" />
       <workItem from="1653525539151" duration="5637000" />
       <workItem from="1653547357937" duration="9628000" />
+
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>
