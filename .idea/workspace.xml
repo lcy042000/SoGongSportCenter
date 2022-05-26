@@ -7,9 +7,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Announcement DAO까지 구현">
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/LessonManagementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/AnnouncementView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/MainView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AdminDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/DBConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/InstructorDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/MemberDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AdminDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/Announcement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AttachedFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/InstructorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/MemberDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserEnroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementRead.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/META-INF/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib/commons-dbcp2-2.9.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib/commons-pool2-2.11.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/css/announcement.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/LessonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/LessonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/LessonManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/LessonManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,18 +85,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/KIMMINJONG/SoGongSportCenter/SoGongSportsCenter",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\84102\IdeaProjects\OOSE\SoGongSportsCenter" />
-      <recent name="C:\Users\84102\IdeaProjects\OOSE\SoGongSportsCenter\web\WEB-INF" />
-      <recent name="C:\Users\84102\IdeaProjects\OOSE\SoGongSportsCenter\web\WEB-INF\lib" />
+      <recent name="C:\Users\KIMMINJONG\SoGongSportCenter\SoGongSportsCenter" />
+      <recent name="C:\Users\KIMMINJONG\SoGongSportCenter\SoGongSportsCenter\src\Persistence\DAO" />
+      <recent name="C:\Users\KIMMINJONG\SoGongSportCenter\SoGongSportsCenter\src\Persistence\DTO" />
+      <recent name="C:\Users\KIMMINJONG\SoGongSportCenter\SoGongSportsCenter\src\Boundary" />
+      <recent name="C:\Users\KIMMINJONG\SoGongSportCenter\SoGongSportsCenter\src\Service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KIMMINJONG\SoGongSportCenter\SoGongSportsCenter\web\WEB-INF\lib" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -182,6 +226,7 @@
       <workItem from="1653276379474" duration="1245000" />
       <workItem from="1653288254700" duration="411000" />
       <workItem from="1653319668775" duration="1116000" />
+      <workItem from="1653562805308" duration="1245000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>

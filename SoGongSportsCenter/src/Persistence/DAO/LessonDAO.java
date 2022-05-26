@@ -3,8 +3,11 @@ package Persistence.DAO;
 import Persistence.DTO.Lesson;
 import Persistence.DTO.LessonRegistrationInfo;
 import Persistence.DTO.SaleDTO;
-import rsc.Info;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,13 +20,13 @@ public class LessonDAO {
     private static final String  selectLessonWithUserIdAndLessonIdQuery = "SELECT * FROM LESSON_REGISTRATION_INFO WHERE user_id = ? AND lesson_id = ?";
 
 
-    private Connection conn;
-    private Info info;
+    private DataSource ds;
 
     public LessonDAO(){
         try
         {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Context context = new InitialContext();
+            ds = (DataSource) context.lookup("java:comp/env/jdbc/OOSE");
         }
         catch (Exception e)
         {
@@ -34,7 +37,7 @@ public class LessonDAO {
     public boolean createLesson(HashMap<String,Object> map)
     {
 
-        try (Connection conn = DriverManager.getConnection(Info.dbURL, Info.dbId, Info.dbPassword);
+        try (Connection conn = ds.getConnection();
              PreparedStatement psmt = conn.prepareStatement(insertLessonQuery)) {
 
             psmt.setInt(1, (int)map.get("lessonId"));
@@ -65,7 +68,7 @@ public class LessonDAO {
 
         Date date = new Date(System.currentTimeMillis());
 
-        try (Connection conn = DriverManager.getConnection(Info.dbURL, Info.dbId, Info.dbPassword);
+        try (Connection conn = ds.getConnection();
              PreparedStatement psmt = conn.prepareStatement(lessonRegistrationQuery)) {
 
 
@@ -93,7 +96,7 @@ public class LessonDAO {
     {
         LessonRegistrationInfo info = new LessonRegistrationInfo();
 
-        try (Connection conn = DriverManager.getConnection(Info.dbURL, Info.dbId, Info.dbPassword);
+        try (Connection conn = ds.getConnection();
              PreparedStatement psmt = conn.prepareStatement(selectLessonWithUserIdAndLessonIdQuery)) {
 
             psmt.setInt(1, userId);

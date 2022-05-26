@@ -2,6 +2,7 @@ package Service;
 
 import Persistence.DAO.LessonDAO;
 import Persistence.DAO.SaleDAO;
+import Persistence.DAO.UserDAO;
 import Persistence.DTO.SaleDTO;
 
 import java.sql.Date;
@@ -28,6 +29,7 @@ public class LessonManagementService {
 
     public boolean lectureRegistration(int id,int userId,int lessonId)
     {
+
         boolean result = lessonDAO.lectureRegistration(id,userId,lessonId);
         //saleDAO.insertSalse()
         return result;
