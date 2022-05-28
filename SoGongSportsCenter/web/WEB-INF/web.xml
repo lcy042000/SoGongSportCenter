@@ -8,10 +8,6 @@
         <servlet-class>View.MainView</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>userManageView</servlet-name>
-        <servlet-class>View.UserManageView</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>userManageViewEnroll</servlet-name>
         <servlet-class>View.UserManageEnrollView</servlet-class>
     </servlet>
@@ -23,10 +19,6 @@
     <servlet-mapping>
         <servlet-name>mainView</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>userManageView</servlet-name>
-        <url-pattern>/userManage</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>userManageViewEnroll</servlet-name>

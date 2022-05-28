@@ -42,7 +42,7 @@ public class UserDAO {
                     rs.close();
                 }
                 if(conn != null && !stmt.isClosed()){
-                    rs.close();
+                    stmt.close();
                 }
             }
             catch(SQLException e){
@@ -54,7 +54,7 @@ public class UserDAO {
 
     public List<UserDTO> selectUserByName(String name){
         List<UserDTO> userDTOS = new ArrayList<>();
-        String sql = "SELECT * FROM USER WHERE userName = " + name;
+        String sql = "SELECT * FROM USER WHERE userName = '" + name + "'";
         Statement stmt= null;
         ResultSet rs = null;
         try {
@@ -81,11 +81,11 @@ public class UserDAO {
                     rs.close();
                 }
                 if(conn != null && !stmt.isClosed()){
-                    rs.close();
+                    stmt.close();
                 }
             }
             catch(SQLException e){
-                System.out.println("SQL USER BY NAME CLOSE ERROR");
+                System.out.println("SQL ADMIN CLOSE ERROR");
             }
         }
         return userDTOS;

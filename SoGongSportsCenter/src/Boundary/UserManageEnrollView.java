@@ -1,8 +1,8 @@
-package View;
+package Boundary;
 
-import Control.UserEnroll;
-import Control.UserRead;
+import Service.UserEnroll;
 import Persistence.DAO.*;
+import Persistence.DTO.UserDTO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,13 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class UserManageReadView extends HttpServlet {
+import static Service.Message.*;
+
+public class UserManageEnrollView extends HttpServlet {
     private DBConfig dbConfig;
     private UserDAO userDAO;
     private AdminDAO adminDAO;
     private InstructorDAO instructorDAO;
     private MemberDAO memberDAO;
-    private UserRead userRead;
+    private UserEnroll userEnroll;
 
     public void init(){
         dbConfig = new DBConfig();
@@ -25,7 +27,7 @@ public class UserManageReadView extends HttpServlet {
         adminDAO = new AdminDAO(dbConfig.getConnection());
         instructorDAO = new InstructorDAO(dbConfig.getConnection());
         memberDAO = new MemberDAO(dbConfig.getConnection());
-        userRead = new UserRead(userDAO, adminDAO, instructorDAO, memberDAO);
+        userEnroll = new UserEnroll(userDAO, adminDAO, instructorDAO, memberDAO);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -35,12 +37,25 @@ public class UserManageReadView extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        action(request, response);
+        try{
+            int id = Integer.parseInt(request.getParameter("id"));
+            String password = request.getParameter("password");
+            String name = request.getParameter("name");
+            String type = request.getParameter("type");
+            String result = userEnroll.userEnroll(new UserDTO(id, password, name, type));
+            request.setAttribute("resultMessage", result);
+        }catch (NumberFormatException e){
+            request.setAttribute("resultMessage", ENROLL_INVALID_ACCOUNT_VALUE);
+        }catch (Exception e){
+
+        }
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/userManage/enrollAlert.jsp");
+        dispatcher.forward(request, response);
     }
 
     public void action(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/userManage/userManageReadView.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/userManage/userManageEnrollView.jsp");
         dispatcher.forward(request, response);
     }
 }
