@@ -134,7 +134,6 @@
                 </tbody>
             </table>
             <a href="announcementList.jsp" class="writeBtn">목록</a>
-            <input type="submit" href="announcementCreate.jsp" class="inputBtn" value="등록">
         </div>
     </div>
 </body>

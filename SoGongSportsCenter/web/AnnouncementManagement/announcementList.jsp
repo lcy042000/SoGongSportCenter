@@ -129,7 +129,7 @@
                 <%
                     }
                 %>
-                <a href="write.jsp" class="writeBtn">등록</a>
+                <a href="announcementCreate.jsp" class="writeBtn">등록</a>
             </div>
         </div>
     </body>

@@ -50,25 +50,19 @@
             int insertId = (int) resultMap.get("insertID");
             boolean result = (boolean) resultMap.get("result");
 
-            session.setAttribute("announcementId", insertId);
-            PrintWriter script = response.getWriter();
-            script.println("<script>");
-            script.println("location.href = 'announcementRead.jsp'");
-            script.println("</script>");
-
-//            if(result){
-//                session.setAttribute("announcementId", insertId);
-//                PrintWriter script = response.getWriter();
-//                script.println("<script>");
-//                script.println("location.href = 'announcementRead.jsp");
-//                script.println("</script>");
-//            }else{
-//                PrintWriter script = response.getWriter();
-//                script.println("<script>");
-//                script.println("alert('글쓰기에 실패했습니다.')");
-//                script.println("history.back()");
-//                script.println("</script>");
-//            }
+            if(result){
+                session.setAttribute("announcementId", insertId);
+                PrintWriter script = response.getWriter();
+                script.println("<script>");
+                script.println("location.href = 'announcementRead.jsp'");
+                script.println("</script>");
+            }else{
+                PrintWriter script = response.getWriter();
+                script.println("<script>");
+                script.println("alert('글쓰기에 실패했습니다.')");
+                script.println("history.back()");
+                script.println("</script>");
+            }
         }
     %>
 </body>

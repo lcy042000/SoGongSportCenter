@@ -6,60 +6,21 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Announcement DAO까지 구현">
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/AnnouncementView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/MainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AdminDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/DBConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/InstructorDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/MemberDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AdminDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/Announcement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AttachedFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/InstructorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/MemberDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserEnroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserRead.java" afterDir="false" />
-
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementRead.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/META-INF/context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib/commons-dbcp2-2.9.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib/commons-pool2-2.11.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/css/announcement.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" afterDir="false" />
+    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="22-05-26">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
       <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/SoGongSportsCenter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/SoGongSportsCenter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AnnouncementDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AttachedFileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AttachedFileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AnnouncementDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AnnouncementDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AttachedFileDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DTO/AttachedFileDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/example/HelloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Control/AnnouncementController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Entity/Announcement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Entity/AttachedFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Main.class" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementRead.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementRead.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementRead.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementRead.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/rsc/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/rsc/Info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/rsc/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/rsc/Info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +64,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -112,7 +72,7 @@
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="라이브러리" />
+    <property name="project.structure.last.edited" value="모듈" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -125,10 +85,9 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-      
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Tomcat 서버.Tomcat 10.0.20">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SoGongSportsCenter" />
@@ -254,7 +213,6 @@
       <workItem from="1652767454541" duration="4940000" />
       <workItem from="1652787299303" duration="1243000" />
       <workItem from="1653007672198" duration="1886000" />
-
       <workItem from="1653122567766" duration="2484000" />
       <workItem from="1653146090471" duration="600000" />
       <workItem from="1653396888324" duration="6337000" />
@@ -264,7 +222,9 @@
       <workItem from="1653493977131" duration="8071000" />
       <workItem from="1653525539151" duration="5637000" />
       <workItem from="1653547357937" duration="9628000" />
-
+      <workItem from="1653568224099" duration="432000" />
+      <workItem from="1653569378612" duration="1299000" />
+      <workItem from="1653575446653" duration="268000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>
