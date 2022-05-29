@@ -14,10 +14,10 @@
             <ul>
                 <li><a class="active" href="main.jsp">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">회원 관리</a>
+                    <a href="/userManage/" class="dropbtn">회원 관리</a>
                     <div class="dropdown-content">
-                        <a href="#">회원 등록</a>
-                        <a href="#">회원 조회</a>
+                        <a href="/userManage/userManageEnrollView.jsp">회원 등록</a>
+                        <a href="userManage/userManageReadView.jsp">회원 조회</a>
                     </div>
                 </li>
                 <li class="dropdown">

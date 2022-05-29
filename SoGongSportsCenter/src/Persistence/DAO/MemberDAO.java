@@ -41,11 +41,11 @@ public class MemberDAO extends UserDAO {
                     rs.close();
                 }
                 if(conn != null && !stmt.isClosed()){
-                    rs.close();
+                    stmt.close();
                 }
             }
             catch(SQLException e){
-                System.out.println("SQL MEMBER CLOSE ERROR");
+                System.out.println("SQL ADMIN CLOSE ERROR");
             }
         }
         return memberDTOS;

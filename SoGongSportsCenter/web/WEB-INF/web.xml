@@ -3,9 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <resource-ref>
-        <res-ref-name>jdbc/oose</res-ref-name>
-        <res-type>javax.sql.DataSource</res-type>
-        <res-auth>Container</res-auth>
-    </resource-ref>
+    <servlet>
+        <servlet-name>mainView</servlet-name>
+        <servlet-class>Boundary.MainView</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userManageViewEnroll</servlet-name>
+        <servlet-class>Boundary.UserManageEnrollView</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userManageViewRead</servlet-name>
+        <servlet-class>Boundary.UserManageReadView</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mainView</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userManageViewEnroll</servlet-name>
+        <url-pattern>/userManage/enroll</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userManageViewRead</servlet-name>
+        <url-pattern>/userManage/read</url-pattern>
+    </servlet-mapping>
 </web-app>

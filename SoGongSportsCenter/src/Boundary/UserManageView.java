@@ -1,9 +1,5 @@
 package Boundary;
 
-import Service.UserEnroll;
-import Service.UserRead;
-import Persistence.DAO.*;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

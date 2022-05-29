@@ -7,20 +7,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="22-05-26">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/css/userEnroll.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/css/userRead.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/mainView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/userManage/enrollAlert.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/userManage/userManageEnrollView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/userManage/userManageReadView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/userManage/userManageView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/SoGongSportsCenter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/SoGongSportsCenter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/AnnouncementView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementRead.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementRead.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementRead.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementRead.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/rsc/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/rsc/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/rsc/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/rsc/Info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/InstructorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/InstructorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/MemberDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserEnroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserEnroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib/mysql-connector-java-8.0.29.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/AnnouncementView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageEnrollView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageEnrollView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageReadView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageReadView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/AdminDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/AdminDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/InstructorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/InstructorDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/MemberDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/MemberDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/SaleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/SaleDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserEnroll.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserEnroll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/lib/mysql-connector-java-8.0.29.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/AnnouncementView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageEnrollView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageEnrollView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageReadView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageReadView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AdminDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AdminDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/InstructorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/InstructorDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/MemberDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/MemberDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/SaleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/SaleDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserEnroll.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserEnroll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserManagement.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,19 +311,27 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>

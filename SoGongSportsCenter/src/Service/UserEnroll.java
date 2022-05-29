@@ -5,14 +5,11 @@ import Persistence.DAO.InstructorDAO;
 import Persistence.DAO.MemberDAO;
 import Persistence.DAO.UserDAO;
 import Persistence.DTO.UserDTO;
-
 import java.util.List;
 
 import static Service.Message.*;
 
-public class UserEnroll extends UserManagement{
-
-
+public class UserEnroll extends UserManagement {
     public UserEnroll(UserDAO userDAO, AdminDAO adminDAO, InstructorDAO instructorDAO, MemberDAO memberDAO){
         super(userDAO, adminDAO, instructorDAO, memberDAO);
     }
@@ -33,7 +30,6 @@ public class UserEnroll extends UserManagement{
                 message = ENROLL_INVALID_TYPE_VALUE;
             }
         }
-
         return message;
     }
 

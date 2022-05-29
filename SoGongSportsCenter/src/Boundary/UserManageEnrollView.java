@@ -1,8 +1,8 @@
 package Boundary;
 
 import Service.UserEnroll;
-import Service.UserRead;
 import Persistence.DAO.*;
+import Persistence.DTO.UserDTO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static Service.Message.*;
 
 public class UserManageEnrollView extends HttpServlet {
     private DBConfig dbConfig;
@@ -35,14 +37,20 @@ public class UserManageEnrollView extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id = request.getParameter("id");
-        String password = request.getParameter("password");
-        String name = request.getParameter("name");
-        String type = request.getParameter("type");
+        try{
+            int id = Integer.parseInt(request.getParameter("id"));
+            String password = request.getParameter("password");
+            String name = request.getParameter("name");
+            String type = request.getParameter("type");
+            String result = userEnroll.userEnroll(new UserDTO(id, password, name, type));
+            request.setAttribute("resultMessage", result);
+        }catch (NumberFormatException e){
+            request.setAttribute("resultMessage", ENROLL_INVALID_ACCOUNT_VALUE);
+        }catch (Exception e){
 
-        Integer.parseInt(id);
-
-        action(request, response);
+        }
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/userManage/enrollAlert.jsp");
+        dispatcher.forward(request, response);
     }
 
     public void action(HttpServletRequest request, HttpServletResponse response)
