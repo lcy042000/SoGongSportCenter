@@ -6,6 +6,7 @@
   <body>
     <script>
       location.href = 'main.jsp';
+      location.href = 'enrollLessonPage.jsp';
     </script>
   </body>
 </html>
