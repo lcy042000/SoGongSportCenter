@@ -18,13 +18,13 @@ public class UserEnroll extends UserManagement {
         String message = inputValidation(userDTO.getUserId(), userDTO.getUserPassword());
         if(message.equals(ENROLL_SUC)){
             if(userDTO.getUserType().equals("admin")){
-                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserPassword(), userDTO.getUserType());
+                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserName(), userDTO.getUserType());
                 adminDAO.createAdmin(userDTO.getUserId());
             }else if(userDTO.getUserType().equals("instructor")){
-                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserPassword(), userDTO.getUserType());
+                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserName(), userDTO.getUserType());
                 instructorDAO.createInstructor(userDTO.getUserId(), 0);
             }else if(userDTO.getUserType().equals("member")){
-                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserPassword(), userDTO.getUserType());
+                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserName(), userDTO.getUserType());
                 memberDAO.createMember(userDTO.getUserId());
             }else{
                 message = ENROLL_INVALID_TYPE_VALUE;

@@ -1,17 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ATIV
-  Date: 2022-05-26
-  Time: 오후 10:02
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>소공 체육 센터</title>
 </head>
 <body>
-<%@ page import="static Control.Message.*" %>
+<%@ page import="static Service.Message.*" %>
 <%String result = (String) request.getAttribute("resultMessage");%>
 <%System.out.println(result);%>
 <%if(result.equals(ENROLL_SUC)){%>

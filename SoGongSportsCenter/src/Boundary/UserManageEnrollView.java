@@ -38,6 +38,8 @@ public class UserManageEnrollView extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
+            request.setCharacterEncoding("UTF-8");
+            response.setCharacterEncoding("UTF-8");
             int id = Integer.parseInt(request.getParameter("id"));
             String password = request.getParameter("password");
             String name = request.getParameter("name");

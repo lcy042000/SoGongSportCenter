@@ -12,10 +12,10 @@
     <ul>
         <li><a class="active" href="/">Home</a></li>
         <li class="dropdown">
-            <a href="/userManage/" class="dropbtn">회원 관리</a>
+            <a href="${pageContext.request.contextPath}/userManage/" class="dropbtn">회원 관리</a>
             <div class="dropdown-content">
-                <a href="/userManage/enroll">회원 등록</a>
-                <a href="/userManage/read">회원 조회</a>
+                <a href="${pageContext.request.contextPath}/userManage/enroll">회원 등록</a>
+                <a href="${pageContext.request.contextPath}/userManage/read">회원 조회</a>
             </div>
         </li>
         <li class="dropdown">
@@ -61,7 +61,7 @@
             <h4>사용자 등록</h4>
         </div>
         <div class="form_content">
-            <form class="login_content" method="post" action="/userManage/enroll">
+            <form class="login_content" method="post" action="${pageContext.request.contextPath}/userManage/enroll">
                 <div class="content">
                     <p>
                         <label for="idTag">사용자 아이디</label>
