@@ -19,14 +19,14 @@
             </div>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">강사 관리</a>
+            <a href="${pageContext.request.contextPath}/" class="dropbtn">강사 관리</a>
             <div class="dropdown-content">
                 <a href="#">강사 등록</a>
                 <a href="#">강사 조회</a>
             </div>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">강습 관리</a>
+            <a href="${pageContext.request.contextPath}/" class="dropbtn">강습 관리</a>
             <div class="dropdown-content">
                 <a href="#">강습 등록</a>
                 <a href="#">수강 신청</a>
@@ -35,8 +35,8 @@
         <li class="dropdown">
             <a href="#" class="dropbtn">공지사항</a>
             <div class="dropdown-content">
-                <a href="AnnouncementManagement/announcementCreate.jsp">공지 등록</a>
-                <a href="AnnouncementManagement/announcementList.jsp">공지 조회</a>
+                <a href="${pageContext.request.contextPath}/AnnouncementManagement/announcementCreate.jsp">공지 등록</a>
+                <a href="${pageContext.request.contextPath}/AnnouncementManagement/announcementList.jsp">공지 조회</a>
             </div>
         </li>
         <li class="dropdown">
