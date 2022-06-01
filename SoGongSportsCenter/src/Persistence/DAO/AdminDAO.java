@@ -42,7 +42,7 @@ public class AdminDAO extends UserDAO {
                     rs.close();
                 }
                 if(conn != null && !stmt.isClosed()){
-                    rs.close();
+                    stmt.close();
                 }
             }
             catch(SQLException e){

@@ -32,12 +32,12 @@
 
         <div class="nav-bar">
             <ul>
-                <li><a class="active" href="/main.jsp">Home</a></li>
+                <li><a class="active" href="${pageContext.request.contextPath}/">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">회원 관리</a>
+                    <a href="${pageContext.request.contextPath}/" class="dropbtn">회원 관리</a>
                     <div class="dropdown-content">
-                        <a href="#">회원 등록</a>
-                        <a href="#">회원 조회</a>
+                        <a href="${pageContext.request.contextPath}/userManage/userManageEnrollView.jsp">회원 등록</a>
+                        <a href="${pageContext.request.contextPath}/userManage/userManageReadView.jsp">회원 조회</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -57,8 +57,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">공지사항</a>
                     <div class="dropdown-content">
-                        <a href="announcementCreate.jsp">공지 등록</a>
-                        <a href="announcementList.jsp">공지 조회</a>
+                        <a href="${pageContext.request.contextPath}/AnnouncementManagement/announcementCreate.jsp">공지 등록</a>
+                        <a href="${pageContext.request.contextPath}/AnnouncementManagement/announcementList.jsp">공지 조회</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -100,7 +100,7 @@
                         %>
                             <tr>
                                 <td class="num"><%=list.get(i).getAnnouncementId()%></td>
-                                <td class="title"><a href="announcementRead.jsp?announcementId=<%=list.get(i).getAnnouncementId()%>"><%=list.get(i).getAnnouncementTitle()%></a></td>
+                                <td class="title"><a href="${pageContext.request.contextPath}/AnnouncementManagement/announcementRead.jsp?announcementId=<%=list.get(i).getAnnouncementId()%>"><%=list.get(i).getAnnouncementTitle()%></a></td>
                                 <td class="user"><%=list.get(i).getAnnouncementWriterName()%></td>
                                 <td class="date"><%=list.get(i).getWriteDate()%></td>
                                 <td class="hits"><%=list.get(i).getHits()%></td>
@@ -129,7 +129,7 @@
                 <%
                     }
                 %>
-                <a href="write.jsp" class="writeBtn">등록</a>
+                <a href="announcementCreate.jsp" class="writeBtn">등록</a>
             </div>
         </div>
     </body>
