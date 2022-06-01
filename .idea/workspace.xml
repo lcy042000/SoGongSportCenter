@@ -6,7 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="UserManagement merge" />
+    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="05/31 16:06">
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib/mysql-connector-java-8.0.29.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement/announcementCreate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/main.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SoGongSportsCenter/web/AnnouncementManagement" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/lib" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="모듈" />
     <property name="project.structure.proportion" value="0.15" />
@@ -63,8 +70,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\84102\IdeaProjects\OOSE\SoGongSportsCenter\web\AnnouncementManagement" />
       <recent name="C:\Users\84102\IdeaProjects\OOSE\SoGongSportsCenter\web\WEB-INF\lib" />
+      <recent name="C:\Users\84102\IdeaProjects\OOSE\SoGongSportsCenter\web\AnnouncementManagement" />
       <recent name="C:\Users\84102\IdeaProjects\OOSE\SoGongSportsCenter" />
       <recent name="C:\Users\84102\IdeaProjects\OOSE\SoGongSportsCenter\web\WEB-INF" />
     </key>
@@ -210,6 +217,7 @@
       <workItem from="1653568224099" duration="432000" />
       <workItem from="1653569378612" duration="1299000" />
       <workItem from="1653575446653" duration="268000" />
+      <workItem from="1653980753836" duration="2476000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>
@@ -260,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653837056603</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="05/31 16:06">
+      <created>1653980779313</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653980779313</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +318,7 @@
     <MESSAGE value="Announcement DAO까지 구현" />
     <MESSAGE value="Persistence 구현 완료" />
     <MESSAGE value="UserManagement merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserManagement merge" />
+    <MESSAGE value="05/31 16:06" />
+    <option name="LAST_COMMIT_MESSAGE" value="05/31 16:06" />
   </component>
 </project>

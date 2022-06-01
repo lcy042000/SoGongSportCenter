@@ -3,7 +3,7 @@
     <head>
         <title>소공 체육 센터</title>
         <meta name="viewport" content="width=device-width", initial-scale="1">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
     </head>
     <body>
         <div class="header">
@@ -14,9 +14,9 @@
             <ul>
                 <li><a class="active" href="main.jsp">Home</a></li>
                 <li class="dropdown">
-                    <a href="/userManage/" class="dropbtn">회원 관리</a>
+                    <a href="userManage/" class="dropbtn">회원 관리</a>
                     <div class="dropdown-content">
-                        <a href="/userManage/userManageEnrollView.jsp">회원 등록</a>
+                        <a href="userManage/userManageEnrollView.jsp">회원 등록</a>
                         <a href="userManage/userManageReadView.jsp">회원 조회</a>
                     </div>
                 </li>

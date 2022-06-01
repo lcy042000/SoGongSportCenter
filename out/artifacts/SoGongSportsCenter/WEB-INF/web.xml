@@ -5,15 +5,15 @@
          version="4.0">
     <servlet>
         <servlet-name>mainView</servlet-name>
-        <servlet-class>View.MainView</servlet-class>
+        <servlet-class>Boundary.MainView</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>userManageViewEnroll</servlet-name>
-        <servlet-class>View.UserManageEnrollView</servlet-class>
+        <servlet-class>Boundary.UserManageEnrollView</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>userManageViewRead</servlet-name>
-        <servlet-class>View.UserManageReadView</servlet-class>
+        <servlet-class>Boundary.UserManageReadView</servlet-class>
     </servlet>
 
     <servlet-mapping>
