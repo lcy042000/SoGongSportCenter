@@ -19,6 +19,8 @@ public class LessonDAO {
     private static final String lessonRegistrationQuery = "INSERT INTO LESSON_REGISTRATION_INFO (id,user_id,lesson_id,registration_date) VALUES (?,?,?,?)";
     private static final String  selectLessonWithUserIdAndLessonIdQuery = "SELECT * FROM LESSON_REGISTRATION_INFO WHERE user_id = ? AND lesson_id = ?";
 
+    private static final String selectLessonWithLessonId = "SELECT * FROM LESSON_REGISTRATION_INFO WHERE lesson_id = ?";
+    private static final String selectAll = "SELECT * FROM LESSON_REGISTRATION_INFO";
 
     private DataSource ds;
 
@@ -32,6 +34,69 @@ public class LessonDAO {
         {
             e.printStackTrace();
         }
+    }
+
+    public Lesson selectLessonWithId(int lessonId){
+
+        Lesson lesson = new Lesson();
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement psmt = conn.prepareStatement(selectLessonWithLessonId)) {
+
+            psmt.setInt(1,lessonId);
+
+            try (ResultSet rs = psmt.executeQuery())
+            {
+                rs.next();
+                lesson.setId(rs.getInt("id"));
+                lesson.setLessonName(rs.getString("name"));
+                lesson.setClassroom(rs.getString("classroom"));
+                lesson.setInstructorId(rs.getInt("instructor_id"));
+                lesson.setPrice(rs.getInt("price"));
+
+            }
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+        return lesson;
+
+    }
+
+    public List<Lesson> selectAll()
+    {
+        List<Lesson> list = new ArrayList<>();
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement psmt = conn.prepareStatement(selectAll)) {
+
+
+            try (ResultSet rs = psmt.executeQuery())
+            {
+                rs.next();
+                Lesson lesson = new Lesson();
+                lesson.setId(rs.getInt("id"));
+                lesson.setLessonName(rs.getString("name"));
+                lesson.setClassroom(rs.getString("classroom"));
+                lesson.setInstructorId(rs.getInt("instructor_id"));
+                lesson.setPrice(rs.getInt("price"));
+
+                list.add(lesson);
+
+            }
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+        return list;
     }
 
     public boolean createLesson(HashMap<String,Object> map)

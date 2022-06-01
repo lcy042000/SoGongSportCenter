@@ -96,6 +96,47 @@ public class InstructorDAO extends UserDAO {
         return instructorDTOS;
     }
 
+    public InstructorDTO selectInstructorById(int instructorId) {
+        List<InstructorDTO> instructorDTOS = new ArrayList<>();
+
+        String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where instructor_id = ? ";
+
+        ResultSet rs = null;
+        InstructorDTO instructorDTO = new InstructorDTO();
+
+        try {
+            PreparedStatement psmt = conn.prepareStatement(sql);
+            psmt.setInt(1,instructorId);
+            rs = psmt.executeQuery();
+
+            int userId = rs.getInt("userId");
+            String userPassword = rs.getString("userPassword");
+            String userName = rs.getString("userName");
+            String userType = rs.getString("userType");
+
+            instructorDTO.setUserId(userId);
+            instructorDTO.setUserPassword(userPassword);
+            instructorDTO.setUserName(userName);
+            instructorDTO.setUserType(userType);
+            instructorDTO.setInstructorId(instructorId);
+
+        }catch (SQLException e) {
+            System.out.printf("SELECT INSTRUCTOR ALL ERROR");
+        }finally {
+            try{
+                if(conn != null && !rs.isClosed()){
+                    rs.close();
+                }
+            }
+            catch(SQLException e){
+                System.out.println("SQL ADMIN CLOSE ERROR");
+            }
+        }
+
+        return instructorDTO;
+    }
+
+
     public void createInstructor(int userId, int instructorId){
         PreparedStatement pstmt = null;
         String sql = "Insert Into Instructor (userId, instructorId) Values(?, ?)";
