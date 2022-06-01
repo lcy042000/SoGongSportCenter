@@ -22,6 +22,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="library" name="java" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.291" level="project" />
     <orderEntry type="module-library">
@@ -34,6 +35,9 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="jakarta.servlet.api" level="project" />
+=======
+    <orderEntry type="library" name="jdk-17.0" level="project" />
+>>>>>>> 6b950841e68a95c32acb73a221ac5a13d375a98b
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>
