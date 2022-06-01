@@ -28,7 +28,6 @@
     form
     {
         display: inline-block;
-
     }
 
     input

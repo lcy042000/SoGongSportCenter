@@ -1,4 +1,9 @@
-<%--
+<%@ page import="Persistence.DAO.DBConfig" %>
+<%@ page import="Persistence.DAO.LessonDAO" %>
+<%@ page import="Persistence.DTO.Lesson" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Persistence.DAO.InstructorDAO" %>
+<%@ page import="Persistence.DTO.InstructorDTO" %><%--
   Created by IntelliJ IDEA.
   User: KIMMINJONG
   Date: 2022-05-29
@@ -6,6 +11,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
+<%
+
+    LessonDAO lessonDAO = new LessonDAO();
+    List<Lesson> list = lessonDAO.selectAll();
+    InstructorDAO instructorDAO = new InstructorDAO(new DBConfig().getConnection());
+
+%>
+
 <html>
     <head>
         <title>수강 신청</title>
@@ -60,13 +75,16 @@
                         <th>가격</th>
                         <th>신청</th>
                     </tr>
-                    <%for(int i = 0; i < 10 ; i++){%>
+                    <%for(int i = 0; i < list.size() ; i++){
+                        Lesson lesson  = list.get(i);
+                        InstructorDTO instructorDTO = instructorDAO.selectInstructorById(lesson.getInstructorId());
+                    %>
                     <tr>
-                        <th>강습 이름<%=i%></th>
-                        <th>강습 장소<%=i%></th>
-                        <th>강사명<%=i%></th>
-                        <th>가격<%=i%></th>
-                        <th>신청<%=i%></th>
+                        <th>l<%=lesson.getLessonName()%></th>
+                        <th><%=lesson.getClassroom()%></th>
+                        <th><%=instructorDTO.getUserName()%></th>
+                        <th><%=lesson.getPrice()%></th>
+                        <th><button onclick = "수강신청">신청</button></th>
                     </tr>
                     <% } %>
                 </table>
