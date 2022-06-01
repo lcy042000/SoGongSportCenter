@@ -5,7 +5,7 @@
   </head>
   <body>
     <script>
-      location.href = 'mainView.jsp';
+      location.href = 'main.jsp';
     </script>
   </body>
 </html>

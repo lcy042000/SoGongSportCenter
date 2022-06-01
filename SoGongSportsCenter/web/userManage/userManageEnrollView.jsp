@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>소공 체육 센터</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/userEnroll.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/userEnroll.css
+" type="text/css">
 </head>
 <body>
 <div class="header">
