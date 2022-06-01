@@ -3,7 +3,7 @@
   <component name="CompilerConfiguration">
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/SoGongSportsCenter/src/Boundary" includeSubdirectories="false" />
-      <directory url="file://$PROJECT_DIR$/SoGongSportsCenter/src" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/SoGongSportsCenter/src" includeSubdirectories="false" />
     </excludeFromCompile>
   </component>
 </project>

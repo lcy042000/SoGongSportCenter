@@ -7,30 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="Announcement DAO까지 구현">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/OOSE_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jakarta_servlet_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/enrollLessonPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/registrationPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OOSE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OOSE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/SoGongSportsCenter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/SoGongSportsCenter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/rsc/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/rsc/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/SaleView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AnnouncementDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AttachedFileDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/SaleDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AnnouncementDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AttachedFileDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/SaleDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/AnnouncementService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/SaleManagementService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/rsc/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/rsc/Info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,9 +58,11 @@
     "Repository.Attach.Annotations": "true",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/KIMMINJONG/SoGongSportCenter/SoGongSportsCenter/src",
+    "last_opened_file_path": "C:/Users/KIMMINJONG/CreativeProject",
     "project.structure.last.edited": "라이브러리",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -290,6 +270,9 @@
       <workItem from="1653547357937" duration="9628000" />
       <workItem from="1653815312506" duration="1069000" />
       <workItem from="1653816406145" duration="5510000" />
+      <workItem from="1653823666219" duration="73000" />
+      <workItem from="1653980819686" duration="1248000" />
+      <workItem from="1654065918896" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>
