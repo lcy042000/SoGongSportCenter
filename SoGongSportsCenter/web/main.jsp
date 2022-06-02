@@ -51,8 +51,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">매출 조회</a>
                     <div class="dropdown-content">
-                        <a href="#">기간별 매출 조회</a>
-                        <a href="#">강습별 매출 조회</a>
+                        <a href="SaleManagement/salesByPeriod.jsp">기간별 매출 조회</a>
+                        <a href="SaleManagement/salesByLesson.jsp">강습별 매출 조회</a>
                     </div>
                 </li>
             </ul>

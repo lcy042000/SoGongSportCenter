@@ -1,3 +1,4 @@
+/*
 package Boundary;
 
 import Control.UserEnroll;
@@ -44,3 +45,4 @@ public class UserManageReadView extends HttpServlet {
         dispatcher.forward(request, response);
     }
 }
+*/

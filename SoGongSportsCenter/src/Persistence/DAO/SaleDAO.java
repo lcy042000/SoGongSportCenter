@@ -42,6 +42,7 @@ public class SaleDAO {
                     saleDTO.setTime(rs.getDate("time"));
                     saleDTO.setSales(rs.getInt("sales"));
                     saleDTOList.add(saleDTO);
+                    System.out.println("!23431243214");
                 }
             }
         } catch (Exception e) {
