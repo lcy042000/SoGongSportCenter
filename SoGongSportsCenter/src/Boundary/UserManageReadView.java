@@ -1,7 +1,7 @@
 package Boundary;
 
-import Control.UserEnroll;
-import Control.UserRead;
+import Service.UserEnroll;
+import Service.UserRead;
 import Persistence.DAO.*;
 import Persistence.DTO.UserDTO;
 
