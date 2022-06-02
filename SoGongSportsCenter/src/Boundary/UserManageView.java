@@ -1,3 +1,4 @@
+/*
 package Boundary;
 
 import javax.servlet.RequestDispatcher;
@@ -28,3 +29,4 @@ public class UserManageView extends HttpServlet {
         dispatcher.forward(request, response);
     }
 }
+*/
