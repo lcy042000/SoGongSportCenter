@@ -1,6 +1,7 @@
 package Service;
 
 import Persistence.DAO.*;
+import Persistence.DTO.InstructorDTO;
 import Persistence.DTO.UserDTO;
 
 import java.sql.SQLException;
@@ -8,11 +9,14 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
+
         DBConfig dbConfig = new DBConfig();
         UserDAO userDAO = new UserDAO(dbConfig.getConnection());
         AdminDAO adminDAO = new AdminDAO(dbConfig.getConnection());
         MemberDAO memberDAO = new MemberDAO(dbConfig.getConnection());
         InstructorDAO instructorDAO = new InstructorDAO(dbConfig.getConnection());
+        List<InstructorDTO> list = instructorDAO.selectInstructor();
+
         // 테스트 완료
         // DAO 사용시 생성자로 connection 객체를 파라미터로 줘야함
 
@@ -63,25 +67,25 @@ public class Test {
 
         /*UserDTO userDTO3 = new UserDTO(132, "hhh", "hhh", "member");
         System.out.println(userEnroll.userEnroll(userDTO3));*/
-
-        List<UserDTO> arr1 = userRead.userDataResultAll();
-        for(UserDTO dto : arr1){
-            System.out.println(dto.getUserId());
-        }
-        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
-        List<UserDTO> arr2 = userRead.userDataResultByType("admin");
-        for(UserDTO dto : arr2){
-            System.out.println(dto.getUserId());
-        }
-        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
-        List<UserDTO> arr3 = userRead.userDataResultByType("member");
-        for(UserDTO dto : arr3){
-            System.out.println(dto.getUserId());
-        }
-        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
-        List<UserDTO> arr4 = userRead.userDataResultByType("instructor");
-        for(UserDTO dto : arr4){
-            System.out.println(dto.getUserId());
-        }
+//
+//        List<UserDTO> arr1 = userRead.userDataResultAll();
+//        for(UserDTO dto : arr1){
+//            System.out.println(dto.getUserId());
+//        }
+//        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+//        List<UserDTO> arr2 = userRead.userDataResultByType("admin");
+//        for(UserDTO dto : arr2){
+//            System.out.println(dto.getUserId());
+//        }
+//        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+//        List<UserDTO> arr3 = userRead.userDataResultByType("member");
+//        for(UserDTO dto : arr3){
+//            System.out.println(dto.getUserId());
+//        }
+//        System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+//        List<UserDTO> arr4 = userRead.userDataResultByType("instructor");
+//        for(UserDTO dto : arr4){
+//            System.out.println(dto.getUserId());
+//        }
     }
 }

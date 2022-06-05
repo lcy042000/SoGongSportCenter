@@ -11,10 +11,11 @@ public class DBConfig {
 
     public DBConfig(){
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(dbURL, dbId, dbPassword);
+            System.out.println(1231);
         }catch (Exception e){
-
+            System.out.println(1231);
         }
     }
 
