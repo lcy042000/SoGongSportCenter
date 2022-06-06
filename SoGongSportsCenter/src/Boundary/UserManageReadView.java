@@ -44,7 +44,7 @@ public class UserManageReadView extends HttpServlet {
                 userDTOList = userRead.userDataResultByName(request.getParameter("data"));
             }else if(method.equals("type")) {
                 if (request.getParameter("data") != null) {
-                    String type = (String) request.getParameter("data");
+                    String type = request.getParameter("data");
                     System.out.println(type);
                     if (type.equals("admin"))
                         userDTOList = userRead.userDataResultByType(request.getParameter("data"));

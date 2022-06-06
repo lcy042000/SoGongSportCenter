@@ -112,6 +112,9 @@ public class InstructorDAO extends UserDAO {
                 if(conn != null && !stmt.isClosed()){
                     stmt.close();
                 }
+                if(conn != null){
+                    conn.close();
+                }
             }
             catch(SQLException e){
                 System.out.println("SQL ADMIN CLOSE ERROR");
@@ -152,6 +155,9 @@ public class InstructorDAO extends UserDAO {
                 if(conn != null && !rs.isClosed()){
                     rs.close();
                 }
+                if(conn != null){
+                    conn.close();
+                }
             }
             catch(SQLException e){
                 System.out.println("SQL ADMIN CLOSE ERROR");
@@ -179,14 +185,13 @@ public class InstructorDAO extends UserDAO {
                 if(conn != null && !pstmt.isClosed()){
                     pstmt.close();
                 }
+                if(conn != null){
+                    conn.close();
+                }
             }
             catch(SQLException e){
                 System.out.println("SQL INSTRUCTOR CLOSE ERROR");
             }
         }
-    }
-
-    public void updateInstructorId(int userId, int instructorId){
-        // 필요하면 만들예정
     }
 }

@@ -40,7 +40,7 @@ public class AdminDAO extends UserDAO {
         Statement stmt= null;
         ResultSet rs = null;
         try {
-            conn = null;
+            conn = ds.getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -66,6 +66,9 @@ public class AdminDAO extends UserDAO {
                 if(conn != null && !stmt.isClosed()){
                     stmt.close();
                 }
+                if(conn != null){
+                    conn.close();
+                }
             }
             catch(SQLException e){
                 System.out.println("SQL ADMIN CLOSE ERROR");
@@ -89,6 +92,9 @@ public class AdminDAO extends UserDAO {
             try{
                 if(conn != null && !pstmt.isClosed()){
                     pstmt.close();
+                }
+                if(conn != null){
+                    conn.close();
                 }
             }
             catch(SQLException e){

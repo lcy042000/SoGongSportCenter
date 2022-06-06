@@ -64,6 +64,9 @@ public class UserDAO {
                 if(conn != null && !stmt.isClosed()){
                     stmt.close();
                 }
+                if(conn != null){
+                    conn.close();
+                }
             }
             catch(SQLException e){
                 System.out.println("SQL USER CLOSE ERROR");
@@ -105,6 +108,9 @@ public class UserDAO {
                 if(conn != null && !stmt.isClosed()){
                     stmt.close();
                 }
+                if(conn != null){
+                    conn.close();
+                }
             }
             catch(SQLException e){
                 System.out.println("SQL ADMIN CLOSE ERROR");
@@ -131,6 +137,9 @@ public class UserDAO {
             try{
                 if(conn != null && !pstmt.isClosed()){
                     pstmt.close();
+                }
+                if(conn != null){
+                    conn.close();
                 }
             }
             catch(SQLException e){

@@ -29,8 +29,8 @@
         <li class="dropdown">
             <a href="${pageContext.request.contextPath}/" class="dropbtn">강습 관리</a>
             <div class="dropdown-content">
-                <a href="/LessonManagement/enrollLessonPage.jsp">강습 등록</a>
-                <a href="//registrationPage.jsp">수강 신청</a>
+                <a href="${pageContext.request.contextPath}/LessonManagement/enrollLessonPage.jsp">강습 등록</a>
+                <a href="${pageContext.request.contextPath}/LessonManagement/registrationPage.jsp">수강 신청</a>
             </div>
         </li>
         <li class="dropdown">

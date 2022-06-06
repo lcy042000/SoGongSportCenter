@@ -4,10 +4,9 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.sql.Connection" %>
-<%@ page import="Persistence.DAO.DBConfig" %>
 
 <%
-    InstructorDAO instructorDAO = new InstructorDAO(new DBConfig().getConnection());
+    InstructorDAO instructorDAO = new InstructorDAO();
     List<InstructorDTO> instructorList = instructorDAO.selectInstructor();
 
 %>
