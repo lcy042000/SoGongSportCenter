@@ -1,17 +1,22 @@
 package Service;
 
-import Persistence.DAO.AdminDAO;
-import Persistence.DAO.InstructorDAO;
-import Persistence.DAO.MemberDAO;
-import Persistence.DAO.UserDAO;
+import Persistence.DAO.*;
 import Persistence.DTO.UserDTO;
 import java.util.List;
 
 import static Service.Message.*;
 
-public class UserEnroll extends UserManagement {
-    public UserEnroll(UserDAO userDAO, AdminDAO adminDAO, InstructorDAO instructorDAO, MemberDAO memberDAO){
-        super(userDAO, adminDAO, instructorDAO, memberDAO);
+public class UserEnroll{
+    private UserDAO userDAO;
+    private AdminDAO adminDAO;
+    private InstructorDAO instructorDAO;
+    private MemberDAO memberDAO;
+
+    public UserEnroll(){
+        userDAO = UserDAO.getInstance();
+        adminDAO = AdminDAO.getInstance();
+        instructorDAO = InstructorDAO.getInstance();
+        memberDAO = MemberDAO.getInstance();
     }
 
     public String userEnroll(UserDTO userDTO){

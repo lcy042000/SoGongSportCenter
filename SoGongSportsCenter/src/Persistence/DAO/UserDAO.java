@@ -2,23 +2,43 @@ package Persistence.DAO;
 
 import Persistence.DTO.UserDTO;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
-    protected Connection conn;
+    private DataSource ds;
+    private static UserDAO instance;
 
-    public UserDAO(Connection conn){
-        this.conn = conn;
+    public UserDAO(){
+        try{
+            Context context = new InitialContext();
+            ds = (DataSource) context.lookup("java:comp/env/jdbc/OOSE");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static UserDAO getInstance(){
+
+        if(instance == null){
+            instance = new UserDAO();
+        }
+
+        return instance;
     }
 
     public List<UserDTO> selectUser(){
         List<UserDTO> userDTOS = new ArrayList<>();
         String sql = "SELECT * FROM USER";
+        Connection conn = null;
         Statement stmt= null;
         ResultSet rs = null;
         try {
+            conn = ds.getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -55,9 +75,11 @@ public class UserDAO {
     public List<UserDTO> selectUserByName(String name){
         List<UserDTO> userDTOS = new ArrayList<>();
         String sql = "SELECT * FROM USER WHERE userName = '" + name + "'";
+        Connection conn = null;
         Statement stmt= null;
         ResultSet rs = null;
         try {
+            conn = ds.getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -92,9 +114,11 @@ public class UserDAO {
     }
 
     public void createUser(int userId, String userPassword, String userName, String userType){
+        Connection conn = null;
         PreparedStatement pstmt = null;
         String sql = "Insert Into User (userId, userPassword, userName, userType) Values(?,?,?,?)";
         try{
+            conn = ds.getConnection();
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, userId);
             pstmt.setString(2, userPassword);

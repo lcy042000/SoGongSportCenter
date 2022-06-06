@@ -3,22 +3,44 @@ package Persistence.DAO;
 import Persistence.DTO.InstructorDTO;
 import Persistence.DTO.UserDTO;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class InstructorDAO extends UserDAO {
-    public InstructorDAO(Connection conn){
-        super(conn);
+    private DataSource ds;
+    private static InstructorDAO instance;
+
+    public InstructorDAO(){
+        try{
+            Context context = new InitialContext();
+            ds = (DataSource) context.lookup("java:comp/env/jdbc/OOSE");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static InstructorDAO getInstance(){
+
+        if(instance == null){
+            instance = new InstructorDAO();
+        }
+
+        return instance;
     }
 
     @Override
     public List<UserDTO> selectUser() {
         List<UserDTO> instructorDTOS = new ArrayList<>();
         String sql = "SELECT * FROM USER where userType = 'instructor'";
+        Connection conn = null;
         Statement stmt= null;
         ResultSet rs = null;
         try {
+            conn = ds.getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -58,9 +80,11 @@ public class InstructorDAO extends UserDAO {
     public List<InstructorDTO> selectInstructor() {
         List<InstructorDTO> instructorDTOS = new ArrayList<>();
         String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where userType = 'instructor'";
+        Connection conn = null;
         Statement stmt= null;
         ResultSet rs = null;
         try {
+            conn = ds.getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -100,11 +124,12 @@ public class InstructorDAO extends UserDAO {
         List<InstructorDTO> instructorDTOS = new ArrayList<>();
 
         String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where instructor_id = ? ";
-
+        Connection conn = null;
         ResultSet rs = null;
         InstructorDTO instructorDTO = new InstructorDTO();
 
         try {
+            conn = ds.getConnection();
             PreparedStatement psmt = conn.prepareStatement(sql);
             psmt.setInt(1,instructorId);
             rs = psmt.executeQuery();
@@ -138,9 +163,11 @@ public class InstructorDAO extends UserDAO {
 
 
     public void createInstructor(int userId, int instructorId){
+        Connection conn = null;
         PreparedStatement pstmt = null;
         String sql = "Insert Into Instructor (userId, instructorId) Values(?, ?)";
         try{
+            conn = ds.getConnection();
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, userId);
             pstmt.setInt(2, instructorId);

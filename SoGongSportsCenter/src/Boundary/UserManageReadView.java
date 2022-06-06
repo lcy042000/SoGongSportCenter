@@ -1,30 +1,17 @@
 package Boundary;
 
-import Service.UserEnroll;
 import Service.UserRead;
-import Persistence.DAO.*;
 import Persistence.DTO.UserDTO;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.*;
 
 public class UserManageReadView extends HttpServlet {
-    private DBConfig dbConfig;
-    private UserDAO userDAO;
-    private AdminDAO adminDAO;
-    private InstructorDAO instructorDAO;
-    private MemberDAO memberDAO;
     private UserRead userRead;
 
     public void init(){
-        dbConfig = new DBConfig();
-        userDAO = new UserDAO(dbConfig.getConnection());
-        adminDAO = new AdminDAO(dbConfig.getConnection());
-        instructorDAO = new InstructorDAO(dbConfig.getConnection());
-        memberDAO = new MemberDAO(dbConfig.getConnection());
-        userRead = new UserRead(userDAO, adminDAO, instructorDAO, memberDAO);
+        userRead = new UserRead();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
