@@ -4,7 +4,7 @@
     <head>
         <title>소공 체육 센터</title>
         <meta name="viewport" content="width=device-width", initial-scale="1">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/announcement.css?ver=1">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/announcement.css">
     </head>
 </head>
 <body>
@@ -32,8 +32,8 @@
             <li class="dropdown">
                 <a href="${pageContext.request.contextPath}/" class="dropbtn">강습 관리</a>
                 <div class="dropdown-content">
-                    <a href="#">강습 등록</a>
-                    <a href="#">수강 신청</a>
+                    <a href="/LessonManagement/enrollLessonPage.jsp">강습 등록</a>
+                    <a href="/LessonManagement/registrationPage.jsp">수강 신청</a>
                 </div>
             </li>
             <li class="dropdown">
