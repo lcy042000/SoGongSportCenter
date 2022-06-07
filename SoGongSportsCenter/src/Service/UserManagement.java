@@ -4,7 +4,6 @@ import Persistence.DAO.AdminDAO;
 import Persistence.DAO.InstructorDAO;
 import Persistence.DAO.MemberDAO;
 import Persistence.DAO.UserDAO;
-import Persistence.DTO.UserDTO;
 
 public class UserManagement {
     protected UserDAO userDAO;

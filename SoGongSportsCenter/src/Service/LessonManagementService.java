@@ -3,6 +3,7 @@ package Service;
 import Persistence.DAO.LessonDAO;
 import Persistence.DAO.SaleDAO;
 import Persistence.DAO.UserDAO;
+import Persistence.DTO.Lesson;
 import Persistence.DTO.SaleDTO;
 
 import java.sql.Date;
@@ -13,6 +14,8 @@ public class LessonManagementService {
     private SaleDAO saleDAO;
     private UserDAO userDAO;
     private LessonDAO lessonDAO;
+
+    private static final String centerName = "소공체육센터";
 
     public LessonManagementService(UserDAO userDAO,SaleDAO saleDAO,LessonDAO lessonDAO)
     {
@@ -29,9 +32,13 @@ public class LessonManagementService {
 
     public boolean lectureRegistration(int id,int userId,int lessonId)
     {
-
         boolean result = lessonDAO.lectureRegistration(id,userId,lessonId);
-        //saleDAO.insertSalse()
+        Lesson lesson = lessonDAO.selectLessonWithId(lessonId);
+
+        Date date = new Date(System.currentTimeMillis());
+
+        SaleDTO sale = new SaleDTO(centerName,lesson.getLessonName(),date,lesson.getPrice());
+        saleDAO.InsertSale(sale);
         return result;
     }
 

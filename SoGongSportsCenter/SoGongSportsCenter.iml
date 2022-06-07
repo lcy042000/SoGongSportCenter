@@ -20,7 +20,7 @@
       <sourceFolder url="file://$MODULE_DIR$/rsc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="java" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.291" level="project" />
@@ -33,6 +33,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jakarta.servlet.api" level="project" />
+    <orderEntry type="library" name="jdk-17.0" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>

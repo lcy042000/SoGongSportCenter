@@ -97,8 +97,8 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">공지사항</a>
                 <div class="dropdown-content">
-                    <a href="AnnouncementManagement/announcementCreate.jsp">공지 등록</a>
-                    <a href="AnnouncementManagement/announcementList.jsp">공지 조회</a>
+                    <a href="/AnnouncementManagement/announcementCreate.jsp">공지 등록</a>
+                    <a href="/AnnouncementManagement/announcementList.jsp">공지 조회</a>
                 </div>
             </li>
             <li class="dropdown">

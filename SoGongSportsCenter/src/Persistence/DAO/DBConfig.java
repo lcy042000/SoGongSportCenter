@@ -7,7 +7,7 @@ public class DBConfig {
     private Connection conn;
     private String dbURL = "jdbc:mysql://localhost:3306/sportcenter";
     private String dbId = "root";
-    private String dbPassword = "tkd5957!@#";
+    private String dbPassword = "alswhd11";
 
     public DBConfig(){
         try{

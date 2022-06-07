@@ -5,14 +5,11 @@ import Persistence.DAO.InstructorDAO;
 import Persistence.DAO.MemberDAO;
 import Persistence.DAO.UserDAO;
 import Persistence.DTO.UserDTO;
-
 import java.util.List;
 
 import static Service.Message.*;
 
-public class UserEnroll extends UserManagement{
-
-
+public class UserEnroll extends UserManagement {
     public UserEnroll(UserDAO userDAO, AdminDAO adminDAO, InstructorDAO instructorDAO, MemberDAO memberDAO){
         super(userDAO, adminDAO, instructorDAO, memberDAO);
     }
@@ -21,19 +18,18 @@ public class UserEnroll extends UserManagement{
         String message = inputValidation(userDTO.getUserId(), userDTO.getUserPassword());
         if(message.equals(ENROLL_SUC)){
             if(userDTO.getUserType().equals("admin")){
-                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserPassword(), userDTO.getUserType());
+                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserName(), userDTO.getUserType());
                 adminDAO.createAdmin(userDTO.getUserId());
             }else if(userDTO.getUserType().equals("instructor")){
-                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserPassword(), userDTO.getUserType());
+                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserName(), userDTO.getUserType());
                 instructorDAO.createInstructor(userDTO.getUserId(), 0);
             }else if(userDTO.getUserType().equals("member")){
-                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserPassword(), userDTO.getUserType());
+                userDAO.createUser(userDTO.getUserId(), userDTO.getUserPassword(), userDTO.getUserName(), userDTO.getUserType());
                 memberDAO.createMember(userDTO.getUserId());
             }else{
                 message = ENROLL_INVALID_TYPE_VALUE;
             }
         }
-
         return message;
     }
 

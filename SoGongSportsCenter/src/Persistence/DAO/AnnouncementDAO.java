@@ -160,12 +160,13 @@ public class AnnouncementDAO {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
-        String SQL = "SELECT * FROM announcement WHERE Announcement_ID<? ORDER BY Announcement_ID LIMIT 10;";
+        String SQL = "SELECT * FROM announcement WHERE ?<Announcement_ID AND Announcement_ID<? ORDER BY Announcement_ID LIMIT 10;";
 
         try{
             conn = ds.getConnection();
             pstmt = conn.prepareStatement(SQL);
-            pstmt.setInt(1, (getId() + 1) - (pageNum - 1) * 10);
+            pstmt.setInt(1, (pageNum-1) * 10);
+            pstmt.setInt(2, pageNum * 10 + 1);
             rs = pstmt.executeQuery();
 
             while(rs.next()){
