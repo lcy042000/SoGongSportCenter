@@ -2,12 +2,10 @@ package Persistence.DAO;
 
 import Persistence.DTO.Lesson;
 import Persistence.DTO.LessonRegistrationInfo;
-import Persistence.DTO.SaleDTO;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;

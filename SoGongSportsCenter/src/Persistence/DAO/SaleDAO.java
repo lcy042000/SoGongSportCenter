@@ -1,7 +1,6 @@
 package Persistence.DAO;
 
 import Persistence.DTO.SaleDTO;
-import rsc.*;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

@@ -79,7 +79,7 @@ public class InstructorDAO extends UserDAO {
 
     public List<InstructorDTO> selectInstructor() {
         List<InstructorDTO> instructorDTOS = new ArrayList<>();
-        String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where userType = 'instructor'";
+        String sql = "SELECT user.userId, userPassword, userName, userType, instructor_id FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where userType = 'instructor'";
         Connection conn = null;
         Statement stmt= null;
         ResultSet rs = null;
@@ -93,7 +93,7 @@ public class InstructorDAO extends UserDAO {
                 String userPassword = rs.getString("userPassword");
                 String userName = rs.getString("userName");
                 String userType = rs.getString("userType");
-                int instructorId = rs.getInt("instructorId");
+                int instructorId = rs.getInt("instructor_id");
 
                 instructorDTO.setUserId(userId);
                 instructorDTO.setUserPassword(userPassword);
@@ -103,7 +103,7 @@ public class InstructorDAO extends UserDAO {
                 instructorDTOS.add(instructorDTO);
             }
         }catch (SQLException e) {
-            System.out.println("SELECT INSTRUCTOR ALL ERROR");
+            e.printStackTrace();
         }finally {
             try{
                 if(rs != null && !rs.isClosed()){
@@ -126,7 +126,7 @@ public class InstructorDAO extends UserDAO {
     public InstructorDTO selectInstructorById(int instructorId) {
         List<InstructorDTO> instructorDTOS = new ArrayList<>();
 
-        String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where instructor_id=? ";
+        String sql = "SELECT user.userId, userPassword, userName, userType, instructor_id FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where instructor_id = ? ";
         Connection conn = null;
         ResultSet rs = null;
         InstructorDTO instructorDTO = new InstructorDTO();
@@ -150,7 +150,7 @@ public class InstructorDAO extends UserDAO {
             instructorDTO.setInstructorId(instructorId);
 
         }catch (SQLException e) {
-            System.out.println("SELECT INSTRUCTOR ALL ERROR");
+            e.printStackTrace();
         }finally {
             try{
                 if(rs != null && !rs.isClosed()){

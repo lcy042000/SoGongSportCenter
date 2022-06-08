@@ -5,6 +5,9 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.util.HashMap" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.sql.Blob" %>
+<%@ page import="org.apache.commons.io.FileUtils" %>
+<%@ page import="java.io.File" %>
 <html>
 <head>
     <head>
@@ -61,8 +64,8 @@
             <li class="dropdown">
                 <a href="${pageContext.request.contextPath}/" class="dropbtn">강습 관리</a>
                 <div class="dropdown-content">
-                    <a href="/LessonManagement/enrollLessonPage.jsp">강습 등록</a>
-                    <a href="/LessonManagement/registrationPage.jsp">수강 신청</a>
+                    <a href="${pageContext.request.contextPath}/LessonManagement/enrollLessonPage.jsp">강습 등록</a>
+                    <a href="${pageContext.request.contextPath}/LessonManagement/registrationPage.jsp">수강 신청</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -82,8 +85,8 @@
             <li class="dropdown">
                 <a href="${pageContext.request.contextPath}/" class="dropbtn">매출 조회</a>
                 <div class="dropdown-content">
-                    <a href="#">기간별 매출 조회</a>
-                    <a href="#">강습별 매출 조회</a>
+                    <a href="${pageContext.request.contextPath}/SaleManagement/salesByPeriod.jsp">기간별 매출 조회</a>
+                    <a href="${pageContext.request.contextPath}/SaleManagement/salesByLesson.jsp">강습별 매출 조회</a>
                 </div>
             </li>
         </ul>
@@ -117,8 +120,12 @@
                     <%
                         if(fileDTOList != null){
                             for(int i = 0; i < fileDTOList.size(); i++){
+                                Blob blob = fileDTOList.get(i).getAttachedFile();
+                                byte[] content = blob.getBytes(1, (int) blob.length());
+                                File file = new File("C:\\Users\\84102\\attachedFile" + String.valueOf(i) + ".txt");
+                                FileUtils.writeByteArrayToFile(file,content);
                     %>
-                            <td colspan="5"><%=fileDTOList.get(i).getAttachedFile()%></td>
+                        <td colspan="5"><a><%=file%></a></td>
                     <%
                             }
                         }else{

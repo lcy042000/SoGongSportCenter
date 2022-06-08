@@ -5,6 +5,9 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.util.HashMap" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.sql.Blob" %>
+<%@ page import="org.apache.commons.io.FileUtils" %>
+<%@ page import="java.io.File" %>
 <html>
 <head>
     <head>
@@ -117,8 +120,12 @@
                     <%
                         if(fileDTOList != null){
                             for(int i = 0; i < fileDTOList.size(); i++){
+                                Blob blob = fileDTOList.get(i).getAttachedFile();
+                                byte[] content = blob.getBytes(1, (int) blob.length());
+                                File file = new File("C:\\Users\\84102\\attachedFile" + String.valueOf(i) + ".txt");
+                                FileUtils.writeByteArrayToFile(file,content);
                     %>
-                            <td colspan="5"><%=fileDTOList.get(i).getAttachedFile()%></td>
+                        <td colspan="5"><a><%=file%></a></td>
                     <%
                             }
                         }else{

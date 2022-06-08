@@ -2,7 +2,6 @@ package Service;
 
 import Persistence.DAO.LessonDAO;
 import Persistence.DAO.SaleDAO;
-import Persistence.DAO.UserDAO;
 import Persistence.DTO.Lesson;
 import Persistence.DTO.SaleDTO;
 

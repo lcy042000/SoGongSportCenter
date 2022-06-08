@@ -23,11 +23,9 @@
         int price = Integer.parseInt(request.getParameter("price"));
         int instructor = Integer.parseInt(request.getParameter("instructor"));
 
-
-        DBConfig dbConfig  = new DBConfig();
         SaleDAO saleDAO = new SaleDAO();
         LessonDAO lessonDAO = new LessonDAO();
-        InstructorDAO instructorDAO = new InstructorDAO(dbConfig.getConnection());
+        InstructorDAO instructorDAO = new InstructorDAO();
 
         LessonManagementService lessonManagementService = new LessonManagementService(saleDAO,lessonDAO);
         List<InstructorDTO> list = instructorDAO.selectInstructor();
