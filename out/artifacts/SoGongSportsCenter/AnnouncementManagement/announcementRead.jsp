@@ -91,44 +91,45 @@
 
     <div class="container">
         <div class="row">
-            <table class="table" style="text-align: center; border: 1px solid #dddddd">
+            <table class="readTable" style="text-align: center; border: 1px solid #dddddd">
                 <thead>
                     <tr>
-                        <th colspan="3" style="background-color: #eeeeee; text-align: center;">공지사항</th>
+                        <th colspan="6" style="background-color: #eeeeee; text-align: center; font-size: 15px">공지사항</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td style="width: 20%">제목</td>
-                        <td colspan="3"><%=announcementDTO.getAnnouncementTitle().replaceAll(" ", "&nbsp")
+                        <td style="width: 20%; font-size: 20px; height: 15%">제목</td>
+                        <td colspan="6" style="font-size: 20px"><%=announcementDTO.getAnnouncementTitle().replaceAll(" ", "&nbsp")
                                 .replaceAll("<", "&lt").replaceAll(">", "&gt").replaceAll("\n", "<br>")%></td>
                     </tr>
-                    <tr>
+                    <tr class="row2">
                         <td>작성자</td>
-                        <td colspan="1"><%=announcementDTO.getAnnouncementWriterName()%></td>
+                        <td><%=announcementDTO.getAnnouncementWriterName()%></td>
                         <td>작성일자</td>
-                        <td colspan="2"><%=announcementDTO.getWriteDate()%></td>
-                    </tr>
-                    <tr>
+                        <td><%=announcementDTO.getWriteDate()%></td>
                         <td>조회수</td>
-                        <td colspan="3"><%=announcementDTO.getHits()%></td>
+                        <td style="width: 5%"><%=announcementDTO.getHits()%></td>
                     </tr>
-                    <tr>
+                    <tr class="row3">
                         <td>첨부파일</td>
                     <%
                         if(fileDTOList != null){
                             for(int i = 0; i < fileDTOList.size(); i++){
                     %>
-                            <td colspan="3"><%=fileDTOList.get(i).attachedFile%></td>
+                            <td colspan="5"><%=fileDTOList.get(i).getAttachedFile()%></td>
                     <%
                             }
+                        }else{
+                    %>
+                        <td colspan="5">첨부파일이 없습니다.</td>
+                        <%
                         }
                     %>
                     </tr>
                     <tr>
-                        <td>내용</td>
-                        <td colspan="2" style="min-height: 200px; text-align: left;"><%=announcementDTO.getAnnouncementContent().replaceAll(" ", "&nbsp")
+                        <td class="content" colspan="6" style="min-height: 200px; text-align: left;"><%=announcementDTO.getAnnouncementContent().replaceAll(" ", "&nbsp")
                                 .replaceAll("<", "&lt").replaceAll(">", "&gt").replaceAll("\n", "<br>")%></td>
                     </tr>
                 </tbody>

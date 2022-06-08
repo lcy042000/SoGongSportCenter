@@ -7,6 +7,13 @@
         <element id="directory" name="classes">
           <element id="module-output" name="SoGongSportsCenter" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="cos" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/Tomcat 10.0/lib/servlet-api.jar" />
+          <element id="library" level="project" name="jsp-api" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+          <element id="library" level="project" name="jakarta.servlet.api" />
+        </element>
       </element>
     </root>
   </artifact>
