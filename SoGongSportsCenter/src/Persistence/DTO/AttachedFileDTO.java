@@ -1,11 +1,12 @@
 package Persistence.DTO;
 
+import java.io.File;
 import java.sql.Blob;
 
 public class AttachedFileDTO {
-    public int attachedFileId;
-    public int announcementId;
-    public Blob attachedFile;
+    private int attachedFileId;
+    private int announcementId;
+    private Blob attachedFile;
 
     public AttachedFileDTO(){
         attachedFileId = 0;

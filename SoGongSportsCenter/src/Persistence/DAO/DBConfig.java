@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 
 public class DBConfig {
     private Connection conn;
-    private String dbURL = "jdbc:mysql://localhost:3306/sportcenter";
+    private String dbURL = "jdbc:mysql://localhost:3306/sportcenter?useUnicode=true&characterEncoding=utf8";
     private String dbId = "root";
-    private String dbPassword = "alswhd11";
+    private String dbPassword = "db042000@";
 
     public DBConfig(){
         try{

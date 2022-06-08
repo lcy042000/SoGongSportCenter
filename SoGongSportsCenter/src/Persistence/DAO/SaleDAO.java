@@ -29,7 +29,7 @@ public class SaleDAO {
         List<SaleDTO> saleDTOList = new ArrayList<>();
 
 
-        try (Connection conn = DriverManager.getConnection(Info.dbURL, Info.dbId, Info.dbPassword);
+        try (Connection conn = new DBConfig().getConnection();
              PreparedStatement psmt = conn.prepareStatement(SQL)) {
             psmt.setDate(1, start);
             psmt.setDate(2, end);
@@ -81,7 +81,7 @@ public class SaleDAO {
         String SQL = "INSERT INTO sales " + "(centerName, " + "lessonName, " + "time, " + "sales)" + "VALUES (?, ?, ?, ?);";
         int result = 0;
 
-        try (Connection conn = DriverManager.getConnection(Info.dbURL, Info.dbId, Info.dbPassword);
+        try (Connection conn = new DBConfig().getConnection();
              PreparedStatement psmt = conn.prepareStatement(SQL)) {
             psmt.setString(1, sales.getCenterName());
             psmt.setString(2, sales.getLessonName());

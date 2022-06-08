@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO {
+
     protected Connection conn;
 
     public UserDAO(Connection conn){

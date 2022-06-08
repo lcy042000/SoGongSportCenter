@@ -12,14 +12,13 @@ import java.util.List;
 
 public class LessonManagementService {
     private SaleDAO saleDAO;
-    private UserDAO userDAO;
+
     private LessonDAO lessonDAO;
 
     private static final String centerName = "소공체육센터";
 
-    public LessonManagementService(UserDAO userDAO,SaleDAO saleDAO,LessonDAO lessonDAO)
+    public LessonManagementService(SaleDAO saleDAO,LessonDAO lessonDAO)
     {
-        this.userDAO = userDAO;
         this.saleDAO = saleDAO;
         this.lessonDAO = lessonDAO;
     }
@@ -30,9 +29,9 @@ public class LessonManagementService {
         return result;
     }
 
-    public boolean lectureRegistration(int id,int userId,int lessonId)
+    public boolean lectureRegistration(int userId,int lessonId)
     {
-        boolean result = lessonDAO.lectureRegistration(id,userId,lessonId);
+        boolean result = lessonDAO.lectureRegistration(userId,lessonId);
         Lesson lesson = lessonDAO.selectLessonWithId(lessonId);
 
         Date date = new Date(System.currentTimeMillis());

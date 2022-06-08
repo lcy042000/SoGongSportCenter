@@ -6,7 +6,11 @@ import Persistence.DTO.AttachedFileDTO;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AttachedFileDAO {
@@ -72,7 +76,7 @@ public class AttachedFileDAO {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
-        List<AttachedFileDTO> attachedFileDTOS = null;
+        List<AttachedFileDTO> attachedFileDTOS = new ArrayList<>();
 
         String SQL = "SELECT * FROM attachedfile WHERE Announcement_ID=?";
 
@@ -87,7 +91,11 @@ public class AttachedFileDAO {
                 int announcementIdResult = rs.getInt("Announcement_ID");
                 Blob attachedFile = rs.getBlob("AttachedFile");
 
-                attachedFileDTOS.add(new AttachedFileDTO(attachedFileId, announcementIdResult, attachedFile));
+                if(attachedFile != null){
+
+                    attachedFileDTOS.add(new AttachedFileDTO(attachedFileId, announcementIdResult, attachedFile));
+
+                }
             }
         }catch (SQLException e){
             e.printStackTrace();

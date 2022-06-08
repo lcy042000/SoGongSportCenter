@@ -15,13 +15,13 @@ import java.util.List;
 
 public class LessonDAO {
 
-    private static final String insertLessonQuery = "INSERT INTO LESSON (id,name,classroom,price,instructor_id) VALUES (?,?,?,?,?)";
-    private static final String lessonRegistrationQuery = "INSERT INTO LESSON_REGISTRATION_INFO (id,user_id,lesson_id,registration_date) VALUES (?,?,?,?)";
+    private static final String insertLessonQuery = "INSERT INTO LESSON (name,classroom,price,instructor_id) VALUES (?,?,?,?)";
+    private static final String lessonRegistrationQuery = "INSERT INTO LESSON_REGISTRATION_INFO (user_id,lesson_id,registration_date) VALUES (?,?,?)";
     private static final String  selectLessonWithUserIdAndLessonIdQuery = "SELECT * FROM LESSON_REGISTRATION_INFO WHERE user_id = ? AND lesson_id = ?";
 
-    private static final String selectLessonWithLessonId = "SELECT * FROM LESSON_REGISTRATION_INFO WHERE lesson_id = ?";
-    private static final String selectAll = "SELECT * FROM LESSON_REGISTRATION_INFO";
-
+    private static final String selectLessonWithLessonId = "SELECT * FROM LESSON WHERE id = ?";
+    private static final String selectAll = "SELECT * FROM LESSON";
+    private static final String selectLessonWithLessonName = "SELECT * FROM LESSON WHERE name = ?";
     private DataSource ds;
 
     public LessonDAO(){
@@ -67,6 +67,38 @@ public class LessonDAO {
 
     }
 
+
+    public Lesson selectLessonWithName(String lessonName){
+
+        Lesson lesson = new Lesson();
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement psmt = conn.prepareStatement(selectLessonWithLessonName)) {
+
+            psmt.setString(1,lessonName);
+            System.out.println(lessonName);
+
+            try (ResultSet rs = psmt.executeQuery())
+            {
+                rs.next();
+                lesson.setId(rs.getInt("id"));
+                lesson.setLessonName(rs.getString("name"));
+                lesson.setClassroom(rs.getString("classroom"));
+                lesson.setInstructorId(rs.getInt("instructor_id"));
+                lesson.setPrice(rs.getInt("price"));
+
+            }
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+        return lesson;
+
+    }
     public List<Lesson> selectAll()
     {
         List<Lesson> list = new ArrayList<>();
@@ -77,16 +109,17 @@ public class LessonDAO {
 
             try (ResultSet rs = psmt.executeQuery())
             {
-                rs.next();
-                Lesson lesson = new Lesson();
-                lesson.setId(rs.getInt("id"));
-                lesson.setLessonName(rs.getString("name"));
-                lesson.setClassroom(rs.getString("classroom"));
-                lesson.setInstructorId(rs.getInt("instructor_id"));
-                lesson.setPrice(rs.getInt("price"));
+                while(rs.next())
+                {
+                    Lesson lesson = new Lesson();
+                    lesson.setId(rs.getInt("id"));
+                    lesson.setLessonName(rs.getString("name"));
+                    lesson.setClassroom(rs.getString("classroom"));
+                    lesson.setInstructorId(rs.getInt("instructor_id"));
+                    lesson.setPrice(rs.getInt("price"));
 
-                list.add(lesson);
-
+                    list.add(lesson);
+                }
             }
 
         }
@@ -105,11 +138,10 @@ public class LessonDAO {
         try (Connection conn = ds.getConnection();
              PreparedStatement psmt = conn.prepareStatement(insertLessonQuery)) {
 
-            psmt.setInt(1, (int)map.get("lessonId"));
-            psmt.setString(2, (String)map.get("lessonName"));
-            psmt.setString(3, (String)map.get("classroom"));
-            psmt.setInt(4, (int)map.get("price"));
-            psmt.setInt(5, (int)map.get("instructorId"));
+            psmt.setString(1, (String)map.get("lessonName"));
+            psmt.setString(2, (String)map.get("classroom"));
+            psmt.setInt(3, (int)map.get("price"));
+            psmt.setInt(4, (int)map.get("instructorId"));
 
             int rowNumber = psmt.executeUpdate();
             System.out.println(rowNumber + "has changed");
@@ -124,7 +156,7 @@ public class LessonDAO {
         return true;
     }
 
-    public boolean lectureRegistration(int id,int userId,int lessonId)
+    public boolean lectureRegistration(int userId,int lessonId)
     {
 
         LessonRegistrationInfo info = selectLessonWithUserIdAndLessonId(userId,lessonId);
@@ -136,12 +168,9 @@ public class LessonDAO {
         try (Connection conn = ds.getConnection();
              PreparedStatement psmt = conn.prepareStatement(lessonRegistrationQuery)) {
 
-
-
-            psmt.setInt(1, id);
-            psmt.setInt(2, userId);
-            psmt.setInt(3, lessonId);
-            psmt.setDate(4, date);
+            psmt.setInt(1, userId);
+            psmt.setInt(2, lessonId);
+            psmt.setDate(3, date);
 
             int rowNumber = psmt.executeUpdate();
             System.out.println(rowNumber + "has changed");
@@ -180,7 +209,6 @@ public class LessonDAO {
         }
         catch (Exception e)
         {
-            e.printStackTrace();
             return null;
         }
 

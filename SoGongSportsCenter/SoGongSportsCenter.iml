@@ -20,7 +20,7 @@
       <sourceFolder url="file://$MODULE_DIR$/rsc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="temurin-16" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="java" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.291" level="project" />
@@ -36,5 +36,11 @@
     <orderEntry type="library" name="jakarta.servlet.api" level="project" />
     <orderEntry type="library" name="jdk-17.0" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="cos" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.63" level="application_server_libraries" />
+    <orderEntry type="library" name="servlet-api" level="project" />
+    <orderEntry type="library" name="jsp-api" level="project" />
+    <orderEntry type="library" name="commons-io-2.11.0" level="project" />
+    <orderEntry type="library" name="commons-fileupload-1.4" level="project" />
   </component>
 </module>

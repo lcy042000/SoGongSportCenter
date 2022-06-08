@@ -97,9 +97,8 @@ public class InstructorDAO extends UserDAO {
     }
 
     public InstructorDTO selectInstructorById(int instructorId) {
-        List<InstructorDTO> instructorDTOS = new ArrayList<>();
 
-        String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where instructor_id = ? ";
+        String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where instructorId = ? ";
 
         ResultSet rs = null;
         InstructorDTO instructorDTO = new InstructorDTO();
@@ -108,7 +107,7 @@ public class InstructorDAO extends UserDAO {
             PreparedStatement psmt = conn.prepareStatement(sql);
             psmt.setInt(1,instructorId);
             rs = psmt.executeQuery();
-
+            rs.next();
             int userId = rs.getInt("userId");
             String userPassword = rs.getString("userPassword");
             String userName = rs.getString("userName");
@@ -120,17 +119,10 @@ public class InstructorDAO extends UserDAO {
             instructorDTO.setUserType(userType);
             instructorDTO.setInstructorId(instructorId);
 
-        }catch (SQLException e) {
-            System.out.printf("SELECT INSTRUCTOR ALL ERROR");
-        }finally {
-            try{
-                if(conn != null && !rs.isClosed()){
-                    rs.close();
-                }
-            }
-            catch(SQLException e){
-                System.out.println("SQL ADMIN CLOSE ERROR");
-            }
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
         }
 
         return instructorDTO;

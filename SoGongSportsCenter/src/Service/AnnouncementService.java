@@ -24,7 +24,7 @@ public class AnnouncementService {
 
         boolean result = true;
 
-        if(attachedFileDTO.attachedFile != null){
+        if(attachedFileDTO.getAttachedFile() != null){
             result = attachedFileDAO.createAttachedFile(attachedFileDTO, insertId);
         }
 
