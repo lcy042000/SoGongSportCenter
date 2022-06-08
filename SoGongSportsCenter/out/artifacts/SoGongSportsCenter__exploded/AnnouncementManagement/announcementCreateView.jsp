@@ -38,6 +38,11 @@
 
             if(attachedFile.getAttachedFile() != null){
                 isAttachedFile = 1;
+                PrintWriter script = response.getWriter();
+                script.println("<script>");
+                script.println("alert('파일 들어옴')");
+                script.println("history.back()");
+                script.println("</script>");
             }
 
             AnnouncementDTO announcementDTO = new AnnouncementDTO(announcement.getAnnouncementTitle(), announcement.getAnnouncementContent(), "관리자",

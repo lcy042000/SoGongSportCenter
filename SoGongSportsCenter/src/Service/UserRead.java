@@ -9,9 +9,17 @@ import Persistence.DTO.UserDTO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserRead extends UserManagement {
-    public UserRead(UserDAO userDAO, AdminDAO adminDAO, InstructorDAO instructorDAO, MemberDAO memberDAO){
-        super(userDAO, adminDAO, instructorDAO, memberDAO);
+public class UserRead {
+    private UserDAO userDAO;
+    private AdminDAO adminDAO;
+    private InstructorDAO instructorDAO;
+    private MemberDAO memberDAO;
+
+    public UserRead(){
+        userDAO = UserDAO.getInstance();
+        adminDAO = AdminDAO.getInstance();
+        instructorDAO = InstructorDAO.getInstance();
+        memberDAO = MemberDAO.getInstance();
     }
 
     public List<UserDTO> userDataResultByName(String name){

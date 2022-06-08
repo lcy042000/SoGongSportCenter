@@ -1,10 +1,7 @@
 package Boundary;
 
 import Service.UserEnroll;
-import Service.UserRead;
-import Persistence.DAO.*;
 import Persistence.DTO.UserDTO;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,20 +12,10 @@ import java.io.IOException;
 import static Service.Message.*;
 
 public class UserManageEnrollView extends HttpServlet {
-    private DBConfig dbConfig;
-    private UserDAO userDAO;
-    private AdminDAO adminDAO;
-    private InstructorDAO instructorDAO;
-    private MemberDAO memberDAO;
     private UserEnroll userEnroll;
 
     public void init(){
-        dbConfig = new DBConfig();
-        userDAO = new UserDAO(dbConfig.getConnection());
-        adminDAO = new AdminDAO(dbConfig.getConnection());
-        instructorDAO = new InstructorDAO(dbConfig.getConnection());
-        memberDAO = new MemberDAO(dbConfig.getConnection());
-        userEnroll = new UserEnroll(userDAO, adminDAO, instructorDAO, memberDAO);
+        userEnroll = new UserEnroll();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

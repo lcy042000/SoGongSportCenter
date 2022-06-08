@@ -9,88 +9,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="06/02 23:15">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SoGongSportsCenter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SoGongSportsCenter.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementCreate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementCreate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementRead.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/AnnouncementManagement/announcementRead.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/LessonManagement/enrollLessonPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/LessonManagement/enrollLessonPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/LessonManagement/registrationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/LessonManagement/registrationPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/SaleManagement/salesByLesson.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/SaleManagement/salesByLesson.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/SaleManagement/salesByLessonView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/SaleManagement/salesByLessonView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/SaleManagement/salesByPeriod.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/SaleManagement/salesByPeriod.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/SaleManagement/salesByPeriodView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/SaleManagement/salesByPeriodView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/MainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/MainView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/SaleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/SaleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageEnrollView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageEnrollView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageReadView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Boundary/UserManageReadView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/AdminDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/AdminDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/AnnouncementDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/AnnouncementDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/AttachedFileDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/AttachedFileDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/DBConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/DBConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/InstructorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/InstructorDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/LessonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/LessonDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/MemberDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/MemberDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/SaleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/SaleDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/AdminDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/AdminDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/AnnouncementDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/AnnouncementDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/AttachedFileDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/AttachedFileDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/InstructorDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/InstructorDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/Lesson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/Lesson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/LessonRegistrationInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/LessonRegistrationInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/MemberDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/MemberDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/SaleDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/SaleDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Persistence/DTO/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/AnnouncementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/AnnouncementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/LessonManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/LessonManagementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/SaleManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/SaleManagementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserEnroll.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserEnroll.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserRead.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/Service/UserRead.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/rsc/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/WEB-INF/classes/rsc/Info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/css/announcement.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SoGongSportsCenter/css/announcement.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/AnnouncementView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/MainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/MainView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/SaleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/SaleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageEnrollView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageEnrollView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageReadView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Boundary/UserManageReadView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AdminDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AdminDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AnnouncementController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AnnouncementDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AnnouncementDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AttachedFileDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/AttachedFileDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/DBConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/DBConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/InstructorDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/InstructorDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/LessonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/LessonDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/MemberDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/MemberDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/SaleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/SaleDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DAO/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AdminDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AdminDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/Announcement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AnnouncementDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AnnouncementDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AttachedFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AttachedFileDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/AttachedFileDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/InstructorDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/InstructorDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/Lesson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/Lesson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/LessonRegistrationInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/LessonRegistrationInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/MemberDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/MemberDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/SaleDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/SaleDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Persistence/DTO/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/AnnouncementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/AnnouncementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/LessonManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/LessonManagementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/SaleManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/SaleManagementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserEnroll.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserEnroll.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserRead.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/Service/UserRead.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SoGongSportsCenter/rsc/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoGongSportsCenter/rsc/Info.class" afterDir="false" />
+    <list default="true" id="bdbbf37a-52f8-4737-8cd0-75c79bbc39b7" name="변경" comment="06/08 16:35">
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/LessonManagement/enrollLessonPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/LessonManagement/registrationPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/SaleManagement/salesByLesson.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/SaleManagement/salesByLessonView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/SaleManagement/salesByPeriod.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/SaleManagement/salesByPeriodView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/AnnouncementManagement/announcementCreate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/AnnouncementManagement/announcementCreate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/AnnouncementManagement/announcementCreateView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/AnnouncementManagement/announcementCreateView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/AnnouncementManagement/announcementList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/AnnouncementManagement/announcementList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/AnnouncementManagement/announcementRead.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/AnnouncementManagement/announcementRead.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/userManage/userManageEnrollView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/userManage/userManageEnrollView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/userManage/userManageReadView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/out/artifacts/SoGongSportsCenter__exploded/userManage/userManageReadView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/rsc/rsc/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/rsc/rsc/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageEnrollView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageReadView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Boundary/UserManageView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/InstructorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/InstructorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/MemberDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Persistence/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserEnroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserEnroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserRead.java" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/src/Service/UserRead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/LessonManagement/enrollLessonPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/LessonManagement/enrollLessonPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/LessonManagement/registrationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/LessonManagement/registrationPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/userManage/userManageEnrollView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/userManage/userManageEnrollView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoGongSportsCenter/web/userManage/userManageReadView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SoGongSportsCenter/web/userManage/userManageReadView.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -608,7 +562,7 @@
       <workItem from="1654435546981" duration="2954000" />
       <workItem from="1654504123320" duration="1093000" />
       <workItem from="1654505277578" duration="214000" />
-      <workItem from="1654665969491" duration="7599000" />
+      <workItem from="1654665969491" duration="8446000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1652772426020</created>
@@ -694,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654179352058</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="06/08 16:35">
+      <created>1654673754861</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654673754861</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -745,6 +706,7 @@
     <MESSAGE value="06/02 22:50" />
     <MESSAGE value="06/02 23:01" />
     <MESSAGE value="06/02 23:15" />
-    <option name="LAST_COMMIT_MESSAGE" value="06/02 23:15" />
+    <MESSAGE value="06/08 16:35" />
+    <option name="LAST_COMMIT_MESSAGE" value="06/08 16:35" />
   </component>
 </project>

@@ -1,6 +1,5 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="Persistence.DAO.InstructorDAO" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="Persistence.DTO.InstructorDTO" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
@@ -45,20 +44,22 @@
     <div class = "lesson_enroll_container">
 
         <div class = "lesson_enroll_form">
-            <form action="enrollButtonClick.jsp" method = "post" >
-                <div><label for="lesson_name">강좌 이름</label><input type="text" id = "lesson_name" name = "lesson_name" placeholder="강좌 이름 입력" required></div>
-                <div><label for="classroom">강의실</label><input type="text" id = "classroom" name = "classroom" placeholder="장소 입력" required></div>
-                <div><label for="price">강습료</label><input type="number" id = "price" name = "price" placeholder="가격 입력" required></div>
+            <form action="#">
+                <div><label for="lesson_name">강좌 이름</label><input type="text" id = "lesson_name" placeholder="강좌 이름 입력" required></div>
+                <div><label for="classroom">강의실</label><input type="text" id = "classroom" placeholder="장소 입력" required></div>
+                <div><label for="price">강습료</label><input type="text" id = "price" placeholder="가격 입력" required></div>
                 <div><label>강사 선택</label>
-                    <select id="select_instructor" name="instructor">
+                    <select id="select_instructor">
                         <%  int i;
                             for( i = 0 ; i < instructorList.size();i++){ %>
-                        <option value="<%=instructorList.get(i).getInstructorId()%>"><%=instructorList.get(i).getUserName()%></option>
+                        <option value="<%=i%>"><% instructorList.get(i); %></option>
                         <% } %>
                     </select>
                 </div>
 
-                <div><input type="submit" value="등록"> &nbsp <input type="button" onclick=history.back() value="취소"> </div>
+                <div><input type="button" onclick="" value="등록">&nbsp<input type="button" onclick="" value="취소"> </div>
+
+
 
             </form>
         </div>
