@@ -3,33 +3,44 @@ package Persistence.DAO;
 import Persistence.DTO.SaleDTO;
 import rsc.*;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SaleDAO {
 
-    private Connection conn;
-    private Info info;
+    private DataSource ds;
+    private static SaleDAO instance;
+
 
     public SaleDAO() {
         try {
-            String dbURL = Info.dbURL;
-            String dbId = Info.dbId;
-            String dbPassword = Info.dbPassword;
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Context context = new InitialContext();
+            ds = (DataSource) context.lookup("java:comp/env/jdbc/OOSE");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    public static SaleDAO getInstance(){
+        if(instance == null){
+            instance = new SaleDAO();
+        }
+
+        return instance;
+    }
+
+
     public List<SaleDTO> selectSalesByPeriod(Date start, Date end) {
-        String SQL = "Select * from sales where time > ?  AND time < ?";
+        String SQL = "Select * from sales where time >= ?  AND time <= ?";
 
         List<SaleDTO> saleDTOList = new ArrayList<>();
 
 
-        try (Connection conn = new DBConfig().getConnection();
+        try (Connection conn = ds.getConnection();
              PreparedStatement psmt = conn.prepareStatement(SQL)) {
             psmt.setDate(1, start);
             psmt.setDate(2, end);
@@ -57,7 +68,7 @@ public class SaleDAO {
         List<SaleDTO> saleDTOList = new ArrayList<>();
 
 
-        try (Connection conn = DriverManager.getConnection(Info.dbURL, Info.dbId, Info.dbPassword);
+        try (Connection conn = ds.getConnection();
              PreparedStatement psmt = conn.prepareStatement(SQL)) {
             psmt.setString(1, lesson);
 
@@ -81,7 +92,7 @@ public class SaleDAO {
         String SQL = "INSERT INTO sales " + "(centerName, " + "lessonName, " + "time, " + "sales)" + "VALUES (?, ?, ?, ?);";
         int result = 0;
 
-        try (Connection conn = new DBConfig().getConnection();
+        try (Connection conn = ds.getConnection();
              PreparedStatement psmt = conn.prepareStatement(SQL)) {
             psmt.setString(1, sales.getCenterName());
             psmt.setString(2, sales.getLessonName());

@@ -9,7 +9,7 @@ import java.util.List;
 public class SaleManagementService {
     private SaleDAO saleDAO;
 
-    public SaleManagementService() { saleDAO = new SaleDAO(); }
+    public SaleManagementService() { saleDAO = SaleDAO.getInstance(); }
 
     public List<SaleDTO> findSalesByPeriod(Date start, Date end) {
         List<SaleDTO> saleDTOList = saleDAO.selectSalesByPeriod(start, end);
