@@ -9,13 +9,7 @@
 <%@ page import="Persistence.DAO.SaleDAO" %>
 <%@ page import="Persistence.DTO.SaleDTO" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="Service.LessonManagementService" %><%--
-  Created by IntelliJ IDEA.
-  User: KIMMINJONG
-  Date: 2022-06-05
-  Time: 오후 9:23
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="Service.LessonManagementService" %>
 
 <html>
 <head>
@@ -30,10 +24,8 @@
  //   String user_name = request.getParameter("user_name");
     String price = request.getParameter("price");
 
-    DBConfig dbConfig = new DBConfig();
-
     LessonDAO lessonDAO = new LessonDAO();
-    UserDAO userDAO = new UserDAO(dbConfig.getConnection());
+    UserDAO userDAO = new UserDAO();
     SaleDAO saleDAO = new SaleDAO();
     try{
         Integer.parseInt(lesson_id);

@@ -1,16 +1,9 @@
-<%@ page import="Persistence.DAO.DBConfig" %>
 <%@ page import="Persistence.DAO.LessonDAO" %>
 <%@ page import="Persistence.DTO.Lesson" %>
 <%@ page import="java.util.List" %>
 <%@ page import="Persistence.DAO.InstructorDAO" %>
 <%@ page import="Persistence.DTO.InstructorDTO" %>
-<%@ page import="java.util.ArrayList" %><%--
-  Created by IntelliJ IDEA.
-  User: KIMMINJONG
-  Date: 2022-05-29
-  Time: 오후 7:19
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
@@ -30,7 +23,7 @@
 //    }
 
 
-    InstructorDAO instructorDAO = new InstructorDAO(new DBConfig().getConnection());
+    InstructorDAO instructorDAO = new InstructorDAO();
 
 %>
 

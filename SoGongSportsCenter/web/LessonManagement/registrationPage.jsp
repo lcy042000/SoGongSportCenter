@@ -1,4 +1,3 @@
-<%@ page import="Persistence.DAO.DBConfig" %>
 <%@ page import="Persistence.DAO.LessonDAO" %>
 <%@ page import="Persistence.DTO.Lesson" %>
 <%@ page import="java.util.List" %>
@@ -24,7 +23,7 @@
 //    }
 
 
-    InstructorDAO instructorDAO = new InstructorDAO(new DBConfig().getConnection());
+    InstructorDAO instructorDAO = new InstructorDAO();
 
 %>
 

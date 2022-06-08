@@ -60,11 +60,11 @@ public class InstructorDAO extends UserDAO {
             System.out.printf("SELECT INSTRUCTOR ERROR");
         }finally {
             try{
-                if(conn != null && !rs.isClosed()){
+                if(rs != null && !rs.isClosed()){
                     rs.close();
                 }
-                if(conn != null && !stmt.isClosed()){
-                    rs.close();
+                if(stmt != null && !stmt.isClosed()){
+                    stmt.close();
                 }
                 if(conn != null && !conn.isClosed()){
                     conn.close();
@@ -103,13 +103,13 @@ public class InstructorDAO extends UserDAO {
                 instructorDTOS.add(instructorDTO);
             }
         }catch (SQLException e) {
-            System.out.printf("SELECT INSTRUCTOR ALL ERROR");
+            System.out.println("SELECT INSTRUCTOR ALL ERROR");
         }finally {
             try{
-                if(conn != null && !rs.isClosed()){
+                if(rs != null && !rs.isClosed()){
                     rs.close();
                 }
-                if(conn != null && !stmt.isClosed()){
+                if(stmt != null && !stmt.isClosed()){
                     stmt.close();
                 }
                 if(conn != null){
@@ -126,7 +126,7 @@ public class InstructorDAO extends UserDAO {
     public InstructorDTO selectInstructorById(int instructorId) {
         List<InstructorDTO> instructorDTOS = new ArrayList<>();
 
-        String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where instructor_id = ? ";
+        String sql = "SELECT user.userId, userPassword, userName, userType, instructorId FROM USER JOIN INSTRUCTOR ON user.userId = instructor.userId where instructor_id=? ";
         Connection conn = null;
         ResultSet rs = null;
         InstructorDTO instructorDTO = new InstructorDTO();
@@ -150,10 +150,10 @@ public class InstructorDAO extends UserDAO {
             instructorDTO.setInstructorId(instructorId);
 
         }catch (SQLException e) {
-            System.out.printf("SELECT INSTRUCTOR ALL ERROR");
+            System.out.println("SELECT INSTRUCTOR ALL ERROR");
         }finally {
             try{
-                if(conn != null && !rs.isClosed()){
+                if(rs != null && !rs.isClosed()){
                     rs.close();
                 }
                 if(conn != null){
@@ -183,7 +183,7 @@ public class InstructorDAO extends UserDAO {
             System.out.println("CREATE INSTRUCTOR ERROR");
         }finally {
             try{
-                if(conn != null && !pstmt.isClosed()){
+                if(pstmt != null && !pstmt.isClosed()){
                     pstmt.close();
                 }
                 if(conn != null){
