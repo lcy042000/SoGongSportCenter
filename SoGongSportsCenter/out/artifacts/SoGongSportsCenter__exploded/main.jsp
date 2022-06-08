@@ -14,7 +14,7 @@
             <ul>
                 <li><a class="active" href="main.jsp">Home</a></li>
                 <li class="dropdown">
-                    <a href="userManage/" class="dropbtn">회원 관리</a>
+                    <a href="#" class="dropbtn">회원 관리</a>
                     <div class="dropdown-content">
                         <a href="userManage/userManageEnrollView.jsp">회원 등록</a>
                         <a href="userManage/userManageReadView.jsp">회원 조회</a>
