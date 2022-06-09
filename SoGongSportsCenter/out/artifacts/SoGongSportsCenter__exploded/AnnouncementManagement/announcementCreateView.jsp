@@ -4,7 +4,13 @@
 <%@ page import="java.time.LocalDate" %>
 <%@ page import="Persistence.DTO.AttachedFileDTO" %>
 <%@ page import="java.util.HashMap" %>
-<%@ page import="jdk.jshell.spi.ExecutionControl" %>
+<%@ page import="org.apache.commons.fileupload.DiskFileUpload" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="org.apache.commons.fileupload.FileItem" %>
+<%@ page import="java.io.File" %>
+<%@ page import="java.sql.Blob" %>
+<%@ page import="java.io.FileInputStream" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <% request.setCharacterEncoding("UTF-8"); %>
@@ -25,7 +31,62 @@
             announcementId = (int)session.getAttribute("announcementId");
         }
 
-        if(announcement.getAnnouncementTitle() == null) {
+        int isAttachedFile = 0;
+        final int FILESIZE = 1024 * 1024 * 10;
+        String path = "C:\\Users\\84102\\attachedFile";
+        DiskFileUpload dfu = new DiskFileUpload();
+        dfu.setSizeMax(FILESIZE);
+        dfu.setSizeThreshold(4096);
+        dfu.setRepositoryPath(path);
+        List items = dfu.parseRequest((HttpServletRequest) request);
+        Iterator params =  items.iterator();
+        Blob blob = null;
+        FileInputStream fis = null;
+
+        String announcementTitle = "", announcementContent = "";
+
+        while(params.hasNext()){
+            FileItem item = (FileItem) params.next();
+
+            if(item.isFormField()){
+                String name = item.getFieldName();
+
+                if(name.equals("announcementTitle")){
+                    announcementTitle = item.getString("UTF-8");
+                }else if(name.equals("announcementContent")){
+                    announcementContent = item.getString("UTF-8");
+                }
+            }else{
+                String fileFieldName = item.getFieldName();
+                String fileName = item.getName();
+                String contentType = item.getContentType();
+                fileName.substring(fileName.lastIndexOf("\\")+1);
+                File file = new File(path + "/" + fileName);
+                item.write(file);
+
+                try {
+                    byte[] bytes = new byte[(int) file.length()];
+                    fis = new FileInputStream(file);
+                    fis.read(bytes);
+
+                    blob = new javax.sql.rowset.serial.SerialBlob(bytes);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }finally {
+                    try {
+                        if (fis != null) {
+                            fis.close();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                isAttachedFile = 1;
+            }
+        }
+
+        if(announcementTitle == null) {
             PrintWriter script = response.getWriter();
             script.println("<script>");
             script.println("alert('제목을 입력하세요.')");
@@ -34,21 +95,10 @@
         }else {
             AnnouncementService service = new AnnouncementService();
 
-            int isAttachedFile = 0;
-
-            if(attachedFile.getAttachedFile() != null){
-                isAttachedFile = 1;
-                PrintWriter script = response.getWriter();
-                script.println("<script>");
-                script.println("alert('파일 들어옴')");
-                script.println("history.back()");
-                script.println("</script>");
-            }
-
-            AnnouncementDTO announcementDTO = new AnnouncementDTO(announcement.getAnnouncementTitle(), announcement.getAnnouncementContent(), "관리자",
+            AnnouncementDTO announcementDTO = new AnnouncementDTO(announcementTitle, announcementContent, "관리자",
                     java.sql.Date.valueOf(LocalDate.now()), isAttachedFile, 0);
 
-            AttachedFileDTO attachedFileDTO = new AttachedFileDTO(-1, -1, attachedFile.getAttachedFile());
+            AttachedFileDTO attachedFileDTO = new AttachedFileDTO(-1, -1, blob);
 
             HashMap<String, Object> resultMap = service.createAnnouncement(announcementDTO, attachedFileDTO);
 
