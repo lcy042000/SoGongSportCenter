@@ -10,14 +10,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%
-    String start = request.getParameter("start");
-    String end = request.getParameter("end");
-    SaleManagementService saleManagementService = new SaleManagementService();
-    List<SaleDTO> saleDTOList = saleManagementService.findSalesByPeriod(Date.valueOf(start), Date.valueOf(end));
-    System.out.println(saleDTOList.size());
-%>
-
 <html>
 <head>
     <title>소공 체육 센터</title>
@@ -117,7 +109,19 @@
             </li>
         </ul>
     </div>
-
+    <%
+        String start = request.getParameter("start");
+        String end = request.getParameter("end");
+        if (start.equals("") || end.equals("") || start.compareTo(end) > 0) {%>
+    <script>
+        window.alert("잘못 입력하셨습니다.");
+        window.location.href = "/SaleManagement/salesByPeriod.jsp";
+    </script>
+        <% } else {
+            SaleManagementService saleManagementService = new SaleManagementService();
+            List<SaleDTO> saleDTOList  = saleManagementService.findSalesByPeriod(Date.valueOf(start), Date.valueOf(end));
+            System.out.println(saleDTOList.size());
+    %>
     <div class="content">
         <%
             if (saleDTOList.size() != 0) {
@@ -160,6 +164,7 @@
             <%}%>
         </div>
     </div>
+    <%}%>
 </div>
 </body>
 </html>
