@@ -62,8 +62,8 @@
 
     <div class="container">
         <div class="row">
-            <form method="post" action="${pageContext.request.contextPath}/AnnouncementManagement/announcementCreateView.jsp">
-                <table class="table" style="text-align: center; border: 1px solid #dddddd">
+            <form method="post" action="${pageContext.request.contextPath}/AnnouncementManagement/announcementCreateView.jsp" enctype="multipart/form-data">
+                <table class="table">
 
                     <thead>
                     <tr>
@@ -76,10 +76,10 @@
                         <td><input type="text" class="input" placeholder="글 제목" name="announcementTitle" maxlength="45"></td>
                     </tr>
                     <tr>
-                        <td><input type="file" class="input" name="attachedFile"> </td>
+                        <td><input type="file" class="input" name="File"> </td>
                     </tr>
                     <tr>
-                        <td><textarea class="input" placeholder="글 내용" name="announcementContent" maxlength="10000" style="height: 350px"></textarea></td>
+                        <td><textarea class="inputContent" placeholder="글 내용" name="announcementContent" maxlength="10000" style="height: 350px"></textarea></td>
                     </tr>
                     </tbody>
 

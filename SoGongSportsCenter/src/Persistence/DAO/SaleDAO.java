@@ -34,7 +34,7 @@ public class SaleDAO {
 
 
     public List<SaleDTO> selectSalesByPeriod(Date start, Date end) {
-        String SQL = "Select * from sales where time > ?  AND time < ?";
+        String SQL = "Select * from sales where time >= ?  AND time <= ?";
 
         List<SaleDTO> saleDTOList = new ArrayList<>();
 

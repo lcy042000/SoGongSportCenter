@@ -65,7 +65,6 @@
     </div>
 
     <form method="get" action="salesByLessonView.jsp" >
-        <input type="text" name="center" placeholder="센터">
         <input type="text" name="lesson" id="lesson" placeholder="강습">
         <input type="submit" value="조회">
     </form>

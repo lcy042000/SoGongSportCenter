@@ -9,6 +9,7 @@
 <%System.out.println(result);%>
 <%if(result.equals(ENROLL_SUC)){%>
 <script>alert("사용자 등록 성공!")</script>
+<script>document.location.href="/userManage/read";</script>
 <%}else if(result.equals(ENROLL_INVALID_ACCOUNT_VALUE)){%>
 <script>alert("유효하지 않은 아이디나 비밀번호 입니다.")</script>
 <%}else if(result.equals(ENROLL_EXIST_ID)){%>
