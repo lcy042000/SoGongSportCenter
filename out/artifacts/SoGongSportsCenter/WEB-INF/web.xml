@@ -12,6 +12,10 @@
         <servlet-name>userManageViewRead</servlet-name>
         <servlet-class>Boundary.UserManageReadView</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>lockerManageView</servlet-name>
+        <servlet-class>Boundary.LockerBoundary</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>userManageViewEnroll</servlet-name>
@@ -20,5 +24,9 @@
     <servlet-mapping>
         <servlet-name>userManageViewRead</servlet-name>
         <url-pattern>/userManage/read</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>lockerManageView</servlet-name>
+        <url-pattern>/locker/*</url-pattern>
     </servlet-mapping>
 </web-app>

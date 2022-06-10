@@ -23,8 +23,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">강사 관리</a>
                     <div class="dropdown-content">
-                        <a href="#">강사 등록</a>
-                        <a href="#">강사 조회</a>
+                        <a href="TeacherManagement/TeacherCreate.jsp">강사 등록</a>
+                        <a href="TeacherManagement/TeacherRead.jsp">강사 조회</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -44,8 +44,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropbtn">사물함 관리</a>
                     <div class="dropdown-content">
-                        <a href="#">사물함 생성</a>
-                        <a href="#">사물함 신청</a>
+                        <a href="LockerManagement/Locker.jsp">사물함 생성</a>
+                        <a href="LockerManagement/Locker.jsp">사물함 신청</a>
                     </div>
                 </li>
                 <li class="dropdown">

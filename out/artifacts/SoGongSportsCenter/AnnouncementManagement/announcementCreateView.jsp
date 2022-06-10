@@ -57,32 +57,34 @@
                     announcementContent = item.getString("UTF-8");
                 }
             }else{
-                String fileFieldName = item.getFieldName();
-                String fileName = item.getName();
-                String contentType = item.getContentType();
-                fileName.substring(fileName.lastIndexOf("\\")+1);
-                File file = new File(path + "/" + fileName);
-                item.write(file);
+                if(!item.getName().isEmpty()){
+                    String fileFieldName = item.getFieldName();
+                    String fileName = item.getName();
+                    String contentType = item.getContentType();
+                    fileName.substring(fileName.lastIndexOf("\\")+1);
+                    File file = new File(path + "/" + fileName);
+                    item.write(file);
 
-                try {
-                    byte[] bytes = new byte[(int) file.length()];
-                    fis = new FileInputStream(file);
-                    fis.read(bytes);
-
-                    blob = new javax.sql.rowset.serial.SerialBlob(bytes);
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
                     try {
-                        if (fis != null) {
-                            fis.close();
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
+                        byte[] bytes = new byte[(int) file.length()];
+                        fis = new FileInputStream(file);
+                        fis.read(bytes);
 
-                isAttachedFile = 1;
+                        blob = new javax.sql.rowset.serial.SerialBlob(bytes);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }finally {
+                        try {
+                            if (fis != null) {
+                                fis.close();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    isAttachedFile = 1;
+                }
             }
         }
 

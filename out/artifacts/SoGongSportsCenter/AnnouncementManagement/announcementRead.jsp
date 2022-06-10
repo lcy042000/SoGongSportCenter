@@ -57,8 +57,8 @@
             <li class="dropdown">
                 <a href="${pageContext.request.contextPath}/" class="dropbtn">강사 관리</a>
                 <div class="dropdown-content">
-                    <a href="#">강사 등록</a>
-                    <a href="#">강사 조회</a>
+                    <a href="${pageContext.request.contextPath}/TeacherManagement/TeacherCreate.jsp">강사 등록</a>
+                    <a href="${pageContext.request.contextPath}/TeacherManagement/TeacherRead.jsp">강사 조회</a>
                 </div>
             </li>
             <li class="dropdown">

@@ -12,17 +12,6 @@
     List<Lesson> list = lessonDAO.selectAll();
     String lessonName = request.getParameter("search_lesson_name");
 
-//    if( lessonName != null)
-//    {
-//        Lesson lesson = lessonDAO.selectLessonWithName(lessonName);
-//        list.add(lesson);
-//    }
-//    else
-//    {
-//        list = lessonDAO.selectAll();
-//    }
-
-
     InstructorDAO instructorDAO = new InstructorDAO();
 
 %>
@@ -60,13 +49,6 @@
     <h1>수강 신청</h1>
         <div class = "registration_container">
 
-<%--            <form action="registrationPage.jsp" method = "get">--%>
-<%--                <span><label for="search_lesson">강습 검색</label><input type="search" id = "search_lesson" name = "search_lesson_name">--%>
-<%--                    <input type="submit" onclick="" value="조회">--%>
-<%--                    <input type="button" onclick= history.back() value="취소">--%>
-<%--                </span>--%>
-<%--            </form>--%>
-
                 <div style="width:100%; height:200px; overflow:auto">
                     <table>
                         <tr>
@@ -89,9 +71,7 @@
                                 <th name = "classroom"><%=lesson.getClassroom()%></th>
                                 <th name = "user_name"><%=instructorDTO.getUserName()%></th>
                                 <th name = "price"><%=lesson.getPrice()%></th>
-<%--                                <jsp:forward page="registrationLesson.jsp">--%>
-<%--                                    <jsp:param value="<%=lesson.getId()%>" name="lesson_id"/>--%>
-<%--                                </jsp:forward>--%>
+
                                 <th><a href ="registrationLesson.jsp?lesson_id=<%=lesson.getId()%>&price=<%=lesson.getPrice()%>">신청</a></th>
                             </tr>
                         <% } %>
