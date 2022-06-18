@@ -122,10 +122,10 @@
                             for(int i = 0; i < fileDTOList.size(); i++){
                                 Blob blob = fileDTOList.get(i).getAttachedFile();
                                 byte[] content = blob.getBytes(1, (int) blob.length());
-                                File file = new File("C:\\Users\\84102\\attachedFile" + String.valueOf(i) + ".txt");
+                                File file = new File("C:\\Users\\84102\\attachedFile\\" + String.valueOf(i) + ".txt");
                                 FileUtils.writeByteArrayToFile(file,content);
                     %>
-                        <td colspan="5"><a><%=file%></a></td>
+                        <td colspan="5"><a href="<%file.getAbsolutePath();%>"><%=String.valueOf(i) + ".txt"%></a></td>
                     <%
                             }
                         }else{

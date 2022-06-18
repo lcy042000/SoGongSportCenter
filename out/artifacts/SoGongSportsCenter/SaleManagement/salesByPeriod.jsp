@@ -66,9 +66,8 @@
 
     <div class="container">
         <form method="get" action="salesByPeriodView.jsp" >
-            <input type="text" name="center">
-            <input type="Date" name="start" id="start">
-            <input type="Date" name="end" id="end">
+            <input type="Date" name="start" id="start" value="">
+            <input type="Date" name="end" id="end" value="">
             <input type="submit" value="조회">
         </form>
     </div>

@@ -172,15 +172,14 @@ public class InstructorDAO extends UserDAO {
     public void createInstructor(int userId, int instructorId){
         Connection conn = null;
         PreparedStatement pstmt = null;
-        String sql = "Insert Into Instructor (userId, instructorId) Values(?, ?)";
+        String sql = "Insert Into Instructor (userId) Values(?)";
         try{
             conn = ds.getConnection();
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, userId);
-            pstmt.setInt(2, instructorId);
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("CREATE INSTRUCTOR ERROR");
+            e.printStackTrace();
         }finally {
             try{
                 if(pstmt != null && !pstmt.isClosed()){
